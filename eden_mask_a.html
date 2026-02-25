@@ -943,6 +943,8 @@
         const nextBtn = document.querySelector('.slider-arrow.next');
         const dots = document.querySelectorAll('.dot');
         let currentSlide = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
 
         function updateSlider(index) {
             if (index < 0) index = slides.length - 1;
@@ -953,15 +955,15 @@
 
             // Update dots
             dots.forEach(dot => dot.classList.remove('active'));
-            dots[currentSlide].classList.add('active');
+            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
 
-            // Update slides active state for better accessibility/animation
+            // Update slides active state
             slides.forEach(slide => slide.classList.remove('active'));
-            slides[currentSlide].classList.add('active');
+            if (slides[currentSlide]) slides[currentSlide].classList.add('active');
         }
 
-        prevBtn.addEventListener('click', () => updateSlider(currentSlide - 1));
-        nextBtn.addEventListener('click', () => updateSlider(currentSlide + 1));
+        if (prevBtn) prevBtn.addEventListener('click', () => updateSlider(currentSlide - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => updateSlider(currentSlide + 1));
 
         dots.forEach(dot => {
             dot.addEventListener('click', () => {
@@ -969,6 +971,30 @@
                 updateSlider(index);
             });
         });
+
+        // Touch Swipe Support
+        if (slider) {
+            slider.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            slider.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+        }
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchStartX - touchEndX > swipeThreshold) {
+                updateSlider(currentSlide + 1); // Next
+            } else if (touchEndX - touchStartX > swipeThreshold) {
+                updateSlider(currentSlide - 1); // Prev
+            }
+        }
+
+        // Initialize Slider
+        updateSlider(0);
     </script>
 </body>
 
