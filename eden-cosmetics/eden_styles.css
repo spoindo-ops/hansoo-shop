@@ -259,8 +259,8 @@ a {
 
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
 .highlight-card {
@@ -275,6 +275,23 @@ a {
 .highlight-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* 정정: 모든 이미지를 정사각형으로 통일 */
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.highlight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지가 잘리더라도 영역을 꽉 채우도록 설정 */
+    display: block;
 }
 
 .highlight-icon {
