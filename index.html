@@ -26,6 +26,71 @@
             --transition-fast: all 0.3s ease;
         }
 
+        /* --- 실버 메탈릭 효과 (더 강력한 버전) --- */
+        .silver-wrapper {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 8px;
+            /* 제품 썸네일과 통일 */
+        }
+
+        /* 1. 베이스 레이어 (Multiply): 진한 실버 톤으로 변경 */
+        .silver-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* 더 진하고 풍부한 회색 그라디언트 */
+            background: linear-gradient(135deg,
+                    rgba(160, 160, 160, 0.6) 0%,
+                    rgba(200, 200, 200, 0.8) 25%,
+                    rgba(140, 140, 140, 0.6) 50%,
+                    rgba(220, 220, 220, 0.9) 60%,
+                    rgba(160, 160, 160, 0.6) 80%,
+                    rgba(190, 190, 190, 0.7) 100%);
+            mix-blend-mode: multiply;
+            /* 흰색을 확실히 어둡게 */
+            opacity: 0.9;
+            /* 거의 불투명하게 덮음 */
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* 2. 광택 레이어 (Soft Light/Screen): 반짝임 강화 */
+        .silver-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(110deg,
+                    transparent 30%,
+                    rgba(255, 255, 255, 0.7) 45%,
+                    rgba(255, 255, 255, 1.0) 50%,
+                    /* 강한 하이라이트 */
+                    rgba(255, 255, 255, 0.7) 55%,
+                    transparent 70%);
+            mix-blend-mode: soft-light;
+            /* 또는 screen */
+            opacity: 0.8;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* 3. 이미지 조정: 대비를 강하게 주어 금속 느낌 극대화 */
+        .silver-wrapper img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+            /* 이미지 자체 라운딩 */
+            filter: contrast(1.3) brightness(0.9) grayscale(1);
+            /* grayscale(1): 완전 무채색(순수 실버) / contrast(1.3): 금속질감 */
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -754,7 +819,10 @@
                 <a href="#eden-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
                         <span class="product-badge">베스트</span>
-                        <img src="eden_mask_v2.png" alt="에덴 백토 마스크">
+                        <!-- 실버 효과 적용 래퍼 -->
+                        <div class="silver-wrapper">
+                            <img src="eden_mask_v2.png" alt="에덴 백토 마스크">
+                        </div>
                     </div>
                     <div class="product-info">
                         <p class="brand">EDEN</p>
