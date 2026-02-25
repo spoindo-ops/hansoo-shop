@@ -1,0 +1,405 @@
+/* Global Styles - Premium K-Beauty Theme */
+:root {
+    --bg-color: #FFFFFF;
+    --soft-blue: #EBF5FB;
+    --primary-text: #333333;
+    --secondary-text: #666666;
+    --accent-color: #3E77EA;
+    /* The Blue from the images */
+    --border-color: #DDDDDD;
+}
+
+body {
+    margin: 0;
+    font-family: 'Manrope', 'Pretendard', sans-serif;
+    color: var(--primary-text);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand,
+.logo {
+    font-family: 'Noto Serif KR', serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary-text);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: var(--secondary-text);
+}
+
+/* 1. HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px 80px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4FAFF 100%);
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    margin: 0 0 10px;
+    color: #222;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    margin-bottom: 50px;
+}
+
+.hero-image-wrapper {
+    max-width: 1000px;
+    /* Increased width for banner style */
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 40px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(62, 119, 234, 0.1);
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    /* Ensure image stays inside */
+}
+
+.hero-image-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the container */
+    border-radius: 20px;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background-color: var(--primary-text);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* 2. PHILOSOPHY */
+.philosophy {
+    padding: 120px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.philosophy h2 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.eng-slogan {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.philosophy .desc {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+}
+
+/* 3. INGREDIENT */
+.ingredient {
+    padding: 100px 0;
+    background-color: var(--soft-blue);
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.image-side img {
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    font-style: italic;
+}
+
+.text-side h3 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.text-side h3 span {
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    color: var(--accent-color);
+    margin-top: 5px;
+}
+
+/* 4. SCIENCE TRIO */
+.science-trio {
+    padding: 100px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.science-trio h3 {
+    font-size: 2rem;
+    margin-bottom: 60px;
+}
+
+.trio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.trio-item {
+    padding: 40px 20px;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+
+.trio-item:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(62, 119, 234, 0.05);
+}
+
+.circle-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-color);
+    background: var(--soft-blue);
+}
+
+.trio-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* 5. MECHANISM */
+.mechanism {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%);
+    text-align: center;
+}
+
+.mechanism h3 {
+    font-size: 2rem;
+    margin-bottom: 60px;
+}
+
+.mechanism-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.mech-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.mech-img-box {
+    margin-bottom: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px;
+    /* Fixed height for consistency */
+}
+
+.mech-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mech-card h4 {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+/* 6. BENEFITS */
+.benefits {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.benefits h3 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.be-item {
+    background: var(--soft-blue);
+    padding: 40px 20px;
+    border-radius: 16px;
+}
+
+.be-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.be-item h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* 7. GALLERY */
+.gallery {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.gallery-full img {
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.footer-content .brand {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-content p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in,
+.fade-in-left,
+.fade-in-right {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.fade-in {
+    transform: translateY(30px);
+}
+
+.fade-in-left {
+    transform: translateX(-30px);
+}
+
+.fade-in-right {
+    transform: translateX(30px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translate(0);
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .split-layout,
+    .trio-grid,
+    .mechanism-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
