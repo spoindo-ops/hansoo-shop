@@ -200,23 +200,83 @@
 
         /* Hero */
         .main-hero {
-            position: relative;
-            height: 80vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url('hero_bg_v2.jpg');
+            min-height: 85vh;
+            background: url('image updated/Gemini_Generated_Image_hmofbzhmofbzhmof.png');
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-align: center;
+            justify-content: flex-start;
+            text-align: left;
+            padding: 60px 3%;
         }
 
-        .hero-text h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 64px;
-            font-weight: 300;
+        .hero-content {
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-subtitle {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            color: var(--white);
             margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: var(--white);
+            margin-bottom: 12px;
+            line-height: 1.2;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+        }
+
+        .hero-tagline {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 15px;
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: var(--white);
+            margin-bottom: 40px;
+            letter-spacing: 0.05em;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-cta {
+            background-color: var(--white);
+            color: var(--text-dark);
+            padding: 18px 60px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: var(--transition-fast);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .hero-cta:hover {
+            background-color: var(--secondary-green);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
         }
 
         /* Products list */
@@ -800,11 +860,12 @@
     <main>
         <!-- 메인 배너 이미지 영역 -->
         <section class="main-hero">
-            <div class="hero-text reveal">
-                <p style="letter-spacing: 0.3em; margin-bottom: 10px;">자연의 생명력, 과학을 만나다</p>
-                <h1>맑고 깨끗한 내일의 아름다움</h1>
-                <a href="#"
-                    style="border: 1px solid white; padding: 15px 45px; display: inline-block; margin-top: 30px; font-size: 13px;">쇼핑하기</a>
+            <div class="hero-content reveal">
+                <p class="hero-subtitle">NATURAL & SCIENCE</p>
+                <h2 class="hero-title">EDEN White Clay Mask</h2>
+                <h3 class="hero-tagline">나를 위한 쉼</h3>
+                <p class="hero-description">자연의 생명력과 과학의 만남</p>
+                <a href="eden_mask.html" class="hero-cta">지금 구매하기</a>
             </div>
         </section>
 
@@ -819,10 +880,7 @@
                 <a href="#eden-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
                         <span class="product-badge">베스트</span>
-                        <!-- 실버 효과 적용 래퍼 -->
-                        <div class="silver-wrapper">
-                            <img src="eden_mask_v2.png" alt="에덴 백토 마스크">
-                        </div>
+                        <img src="eden_promo.png" alt="에덴 백토 마스크">
                     </div>
                     <div class="product-info">
                         <p class="brand">EDEN</p>
@@ -940,16 +998,19 @@
                     style="max-width: 1000px; margin: 0 auto; position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
 
                     <div class="slider-track" style="display: flex; transition: transform 0.5s ease-in-out;">
-                        <div class="slide" style="min-width: 100%;"><img src="detail_1.png" alt="에덴 마스크팩 메인 설명"
-                                style="width: 100%; display: block;"></div>
-                        <div class="slide" style="min-width: 100%;"><img src="detail_2.png" alt="백토의 효능"
-                                style="width: 100%; display: block;"></div>
-                        <div class="slide" style="min-width: 100%;"><img src="detail_3.png" alt="3가지 에너지 과학"
-                                style="width: 100%; display: block;"></div>
-                        <div class="slide" style="min-width: 100%;"><img src="detail_4.png" alt="강력한 흡착력"
-                                style="width: 100%; display: block;"></div>
-                        <div class="slide" style="min-width: 100%;"><img src="detail_5.png" alt="4-in-1 토탈 케어"
-                                style="width: 100%; display: block;"></div>
+                        <div class="slide" style="min-width: 100%;"><img
+                                src="image updated/Gemini_Generated_Image_8nxm5u8nxm5u8nxm.png" alt="에덴 마스크팩 메인 설명"
+                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
+                        <div class="slide" style="min-width: 100%;"><img src="eden-cosmetics/detail_2.png" alt="백토의 효능"
+                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
+                        <div class="slide" style="min-width: 100%;"><img src="eden-cosmetics/detail_3.png"
+                                alt="3가지 에너지 과학"
+                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
+                        <div class="slide" style="min-width: 100%;"><img src="eden-cosmetics/detail_4.png" alt="강력한 흡착력"
+                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
+                        <div class="slide" style="min-width: 100%;"><img
+                                src="image updated/Gemini_Generated_Image_v8odsjv8odsjv8od.png" alt="4-in-1 토탈 케어"
+                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
                     </div>
 
                     <!-- 좌우 이동 버튼 -->
