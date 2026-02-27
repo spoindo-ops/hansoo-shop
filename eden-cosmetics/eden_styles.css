@@ -32,9 +32,6 @@ body {
     background-color: var(--white);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    min-width: 1400px !important;
-    width: 1400px !important;
-    max-width: 1400px !important;
 }
 
 img {
