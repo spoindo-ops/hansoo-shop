@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1400, initial-scale=0.25, maximum-scale=3.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="EDEN 화이트 클레이 백토 마스크 - 자연의 생명력과 과학의 만남으로 탄생한 프리미엄 스킨케어">
     <meta name="keywords" content="EDEN, 마스크팩, 백토, 클레이마스크, 스킨케어, 화장품">
@@ -19,6 +19,24 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="eden-cosmetics/eden_styles.css">
+    <script>
+        function forcePCView() {
+            var screenW = window.innerWidth || document.documentElement.clientWidth;
+            if (screenW < 1400) {
+                var ratio = screenW / 1400;
+                document.body.style.transform = 'scale(' + ratio + ')';
+                document.body.style.transformOrigin = 'top left';
+                document.body.style.width = '1400px';
+                document.body.style.overflowX = 'hidden';
+            } else {
+                document.body.style.transform = 'none';
+                document.body.style.width = '100%';
+                document.body.style.overflowX = 'auto';
+            }
+        }
+        window.addEventListener('resize', forcePCView);
+        window.addEventListener('DOMContentLoaded', forcePCView);
+    </script>
 </head>
 
 <body>
