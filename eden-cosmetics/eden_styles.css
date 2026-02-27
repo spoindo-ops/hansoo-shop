@@ -818,7 +818,7 @@ a {
    =================================== */
 
 /* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 0px) {
     .container {
         padding: 0 30px;
     }
@@ -847,7 +847,7 @@ a {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 0px) {
     .container {
         padding: 0 20px;
     }
