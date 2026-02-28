@@ -202,6 +202,7 @@ a {
     color: #ffffff;
     margin-bottom: 15px;
     text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
 }
 
 .hero-description {
