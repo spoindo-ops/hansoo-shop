@@ -148,7 +148,7 @@ a {
    Hero Section
    =================================== */
 .hero {
-    min-height: 85vh;
+    min-height: 800px;
     background: url('../image updated/Gemini_Generated_Image_hmofbzhmofbzhmof.png');
     background-size: cover;
     background-position: center;
