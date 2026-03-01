@@ -151,16 +151,17 @@ a {
     position: relative;
     width: 100%;
     max-width: none;
-    height: 56.25vw;
+    height: 42.85vw;
+    /* 21:9 aspect ratio */
     max-height: 80vh;
     margin: 0;
-    min-height: 480px;
+    min-height: 400px;
     background-color: rgb(173, 195, 222);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    padding: 60px 8%;
+    padding: 60px 10%;
     overflow: hidden;
 }
 
@@ -171,15 +172,11 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    /* 모바일 브라우저 렌더링 한계를 고려하여 용량이 최적화된 JPG 파일로 변경 */
-    background-image: url('../image updated/hero_bg_compressed.jpg');
+    background-image: url('../eden-cosmetics/hero_bg_v5_final.jpg');
     background-size: cover;
-    /* 비율이 이미 사진과 동일하므로, cover를 쓰면 자르지 않으면서도 완벽하게 꽉 차게 됨 */
     background-position: center;
-    /* 한가운데 위치 */
     background-repeat: no-repeat;
     filter: brightness(1.03);
-    /* 대비 확보를 위해 아주 약간의 밝기만 적용 */
     z-index: 1;
 }
 
