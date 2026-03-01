@@ -152,17 +152,18 @@ a {
     width: 100%;
     max-width: none;
     height: 48vw;
-    /* 원본 2784/1536 비율에 맞춰 조절 */
     max-height: 90vh;
     margin: 0;
     min-height: 400px;
     background-color: #ffffff;
+    /* 양옆 배경을 완전한 흰색으로 */
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* 박스를 중앙 정렬 영역으로 이동 */
+    justify-content: flex-start;
+    /* 왼쪽 정렬 */
     text-align: left;
-    padding: 0;
+    padding: 0 10%;
+    /* 왼쪽 가장자리에서 적당히 띄움 */
     overflow: hidden;
 }
 
@@ -174,11 +175,9 @@ a {
     transform: translateX(-50%);
     width: 100%;
     max-width: 1400px;
-    /* 원본 이미지가 한눈에 들어오는 최적의 너비 */
     height: 100%;
     background-image: url('../image updated/hero_bg_compressed.jpg');
     background-size: contain;
-    /* 잘림 없이 전체 노출 */
     background-position: center;
     background-repeat: no-repeat;
     filter: brightness(1.05);
@@ -188,18 +187,16 @@ a {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 280px;
-    /* 박스 크기 대폭 축소 (기존 330px) */
-    background: rgba(0, 0, 0, 0.4);
-    /* 내용을 좀 더 선명하게 */
-    backdrop-filter: blur(8px);
-    padding: 20px;
-    /* 내부 여백 축소 */
+    max-width: 250px;
+    /* 박스 크기 추가 축소 */
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    padding: 18px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    /* 이미지 안쪽(왼쪽)으로 정확히 배치 */
-    margin-right: 450px;
     margin-top: -30px;
+    margin-left: 20px;
+    /* 미세 조정 */
 }
 
 .hero-subtitle {
