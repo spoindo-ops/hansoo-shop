@@ -149,8 +149,8 @@ a {
    =================================== */
 .hero {
     position: relative;
-    min-height: 1100px;
-    /* 이미지 하단 텍스트까지 다 보이도록 높이 대폭 상향 */
+    min-height: 100vh;
+    /* 원래 크기로 화면에 꽉 차게 원복 */
     display: flex;
     align-items: center;
     justify-content: flex-start;
