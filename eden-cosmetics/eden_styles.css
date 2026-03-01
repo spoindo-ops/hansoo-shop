@@ -313,6 +313,8 @@ a {
     height: 100%;
     object-fit: cover;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
+    /* 빠진 선명도 옵션 다시 추가 */
 }
 
 .highlight-icon {
