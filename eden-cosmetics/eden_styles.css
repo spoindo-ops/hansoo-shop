@@ -149,8 +149,8 @@ a {
    =================================== */
 .hero {
     position: relative;
-    min-height: 100vh;
-    /* 원래 크기로 화면에 꽉 차게 원복 */
+    min-height: 75vh;
+    /* 화면의 75% 크기로 높이를 약 25% 줄임 (제품이 잘리지 않도록) */
     display: flex;
     align-items: center;
     justify-content: flex-start;
