@@ -325,6 +325,9 @@ a {
 
 .highlight-image img {
     width: 100%;
+    /* 4개 사진의 미세한 픽셀 차이가 발생하지 않도록, 원본 가로세로 비율(2752:1536)로 모든 모양을 완벽하게 100% 통일 고정시킴 */
+    aspect-ratio: 2752 / 1536;
+    object-fit: cover;
     display: block;
 }
 
