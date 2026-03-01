@@ -151,6 +151,10 @@ a {
     position: relative;
     /* 모바일/PC 모두 사진 전체를 여백이나 잘림 없이 완벽히 담기 위해 원본 사진 비율을 그대로 적용 */
     aspect-ratio: 2784 / 1536;
+    max-width: 1400px;
+    /* PC 해상도(초대형 모니터)에서 이미지가 너무 거대해지는 것 방지 */
+    margin: 0 auto;
+    /* 박스를 화면 정중앙에 배치 */
     height: auto;
     min-height: unset;
     /* 강제 높이 제한 해제 */
@@ -186,52 +190,54 @@ a {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 400px;
-    /* 상자 크기 줄임 */
+    max-width: 330px;
+    /* 전체 비율 맞춰 상자 크기도 줄임 */
     background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
-    padding: 35px;
-    /* 내부 여백 줄임 */
-    border-radius: 15px;
+    padding: 25px;
+    /* 내부 여백 축소 */
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-subtitle {
-    font-size: 13px;
+    font-size: 11px;
+    /* 글자 크기 축소 */
     font-weight: 700;
     letter-spacing: 0.3em;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: 48px;
-    /* 글자 크기 조정 */
+    font-size: 38px;
+    /* 메인 제목 크기 대폭 축소 */
     font-weight: 300;
     letter-spacing: 0.05em;
     color: #ffffff;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     line-height: 1.2;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
 }
 
 .hero-tagline {
-    font-size: 28px;
-    /* 글자 크기 조정 */
+    font-size: 22px;
+    /* 추가 설명 크기 축소 */
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
     white-space: nowrap;
 }
 
 .hero-description {
-    font-size: 18px;
+    font-size: 15px;
+    /* 본문 설명 크기 축소 */
     color: #ffffff;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     letter-spacing: 0.05em;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
@@ -239,9 +245,11 @@ a {
 .hero-cta {
     background: var(--white);
     color: var(--text-dark);
-    padding: 18px 60px;
+    padding: 14px 40px;
+    /* 버튼 크기 비례해서 축소 */
     border-radius: 50px;
-    font-size: 16px;
+    font-size: 14px;
+    /* 버튼 글씨 크기 축소 */
     font-weight: 600;
     border: 2px solid rgba(255, 255, 255, 0.5);
     transition: var(--transition-fast);
