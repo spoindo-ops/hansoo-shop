@@ -149,22 +149,18 @@ a {
    =================================== */
 .hero {
     position: relative;
-    /* 모바일/PC 모두 사진 전체를 여백이나 잘림 없이 완벽히 담기 위해 원본 사진 비율을 그대로 적용 */
-    aspect-ratio: 2784 / 1536;
-    max-width: 1400px;
-    /* PC 해상도(초대형 모니터)에서 이미지가 너무 거대해지는 것 방지 */
-    margin: 0 auto;
-    /* 박스를 화면 정중앙에 배치 */
-    height: auto;
-    min-height: unset;
-    /* 강제 높이 제한 해제 */
+    width: 100%;
+    max-width: none;
+    height: 56.25vw;
+    max-height: 80vh;
+    margin: 0;
+    min-height: 480px;
     background-color: rgb(173, 195, 222);
-    /* 사진이 축소되면서 남는 빈칸을 사진과 가장 비슷한 하늘색으로 깔끔하게 채움 */
     display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    padding: 60px 3%;
+    padding: 60px 8%;
     overflow: hidden;
 }
 
