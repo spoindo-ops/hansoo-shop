@@ -162,8 +162,8 @@ a {
     justify-content: flex-start;
     /* 왼쪽 정렬 */
     text-align: left;
-    padding: 0 10%;
-    /* 왼쪽 가장자리에서 적당히 띄움 */
+    padding: 0 5%;
+    /* 히어로 콘텐츠(박스)를 왼쪽 가장자리 쪽으로 더 이동 */
     overflow: hidden;
 }
 
