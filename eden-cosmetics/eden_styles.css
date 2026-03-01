@@ -149,8 +149,10 @@ a {
    =================================== */
 .hero {
     position: relative;
-    min-height: 75vh;
-    /* 화면의 75% 크기로 높이를 약 25% 줄임 (제품이 잘리지 않도록) */
+    min-height: 70vh;
+    /* 높이를 화면의 70% 수준으로 조정 */
+    background-color: rgb(173, 195, 222);
+    /* 사진이 축소되면서 남는 빈칸을 사진과 가장 비슷한 하늘색으로 깔끔하게 채움 */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -168,8 +170,11 @@ a {
     height: 100%;
     /* 모바일 브라우저 렌더링 한계를 고려하여 용량이 최적화된 JPG 파일로 변경 */
     background-image: url('../image updated/hero_bg_compressed.jpg');
-    background-size: cover;
-    background-position: center bottom;
+    background-size: contain;
+    /* 핵심! 이미지를 1%도 자르지 않고 영역 안에 온전히 다 구겨 넣음 (크기만 축소됨) */
+    background-position: center;
+    /* 한가운데 위치 */
+    background-repeat: no-repeat;
     filter: brightness(1.03);
     /* 대비 확보를 위해 아주 약간의 밝기만 적용 */
     z-index: 1;
