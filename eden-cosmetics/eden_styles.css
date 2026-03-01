@@ -194,19 +194,19 @@ a {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: -30px;
-    /* 이미지 왼쪽 끝과 제품 박스 중앙 지점으로 정밀 이동 */
-    margin-left: calc((100% - 1400px) / 2 + 283px);
+    /* 박스를 왼쪽으로 더 이동 */
+    margin-left: calc((100% - 1400px) / 2 + 80px);
 }
 
 .hero-subtitle {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.3em;
-    color: #004b8d;
-    /* 요청하신 청색으로 변경 */
+    color: #FFD700;
+    /* 화사한 노란색으로 변경 */
     margin-bottom: 12px;
     text-transform: uppercase;
-    text-shadow: 0 1px 5px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
 .hero-title {
