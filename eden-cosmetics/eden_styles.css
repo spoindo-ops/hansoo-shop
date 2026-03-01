@@ -194,8 +194,8 @@ a {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: -30px;
-    /* 박스를 왼쪽으로 더 이동 */
-    margin-left: calc((100% - 1400px) / 2 + 80px);
+    /* 박스를 제품 방향으로 약간 더 이동하여 균형 조절 */
+    margin-left: calc((100% - 1400px) / 2 + 180px);
 }
 
 .hero-subtitle {
