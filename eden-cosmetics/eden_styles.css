@@ -149,7 +149,8 @@ a {
    =================================== */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 1100px;
+    /* 이미지 하단 텍스트까지 다 보이도록 높이 대폭 상향 */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -168,8 +169,9 @@ a {
     background: url('../image updated/Gemini_Generated_Image_qmcsf5qmcsf5qmcs.png');
     background-size: cover;
     background-position: center bottom;
-    filter: brightness(1.10);
-    /* 배경 밝기를 추가로 5% 더 올림 (총 10% 밝게) */
+    filter: brightness(1.03);
+    /* 대비 확보를 위해 아주 약간의 밝기만 적용 */
+    image-rendering: -webkit-optimize-contrast;
     z-index: 1;
 }
 
@@ -314,6 +316,10 @@ a {
     object-fit: cover;
     /* 이미지가 뭉개지지 않고 영역을 꽉 채우도록 설정 */
     display: block;
+    filter: brightness(1.05);
+    /* 하이라이트 이미지도 5% 밝게 조정 */
+    image-rendering: -webkit-optimize-contrast;
+    /* 텍스트 선명도 보강 */
 }
 
 .highlight-icon {
