@@ -7,6 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>HAN SOO | 프리미엄 자연주의 화장품</title>
+    <script>
+        function forcePCView() {
+            var screenW = window.innerWidth || document.documentElement.clientWidth;
+            if (screenW < 1600) {
+                var ratio = screenW / 1600;
+                document.body.style.transform = 'scale(' + ratio + ')';
+                document.body.style.transformOrigin = 'top left';
+                document.body.style.width = '1600px';
+                document.body.style.overflowX = 'hidden';
+            } else {
+                document.body.style.transform = 'none';
+                document.body.style.width = '100%';
+                document.body.style.overflowX = 'auto';
+            }
+        }
+        window.addEventListener('resize', forcePCView);
+        window.addEventListener('DOMContentLoaded', forcePCView);
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -105,7 +123,7 @@
             background-color: var(--white);
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
-            min-width: 1400px;
+            min-width: 1600px;
         }
 
         a {
