@@ -114,7 +114,6 @@
             display: block;
         }
 
-
         * {
             margin: 0;
             padding: 0;
@@ -687,10 +686,18 @@
         .detail-info {
             border-top: none;
             padding-top: 15px;
-            display: flex !important;
+            display: none !important; /* Hide ALL by default */
             flex-direction: column;
             gap: 0;
         }
+
+        /* 1) 한국어 모드 (기본) - body에 언어 클래스가 없을 때: 한글만 노출 */
+
+        /* 2) 영어 모드 - body가 .en-mode 일 때: 영문만 노출 */
+
+        /* 3) 몽골어 모드 */
+
+        /* 4) 아랍어 모드 */
 
         .info-item {
             margin-bottom: 0;
@@ -1008,13 +1015,6 @@
             display: grid !important;
         }
 
-        body:not(.en-mode):not(.mn-mode):not(.fa-mode) .slide-visual {
-            flex: 1 !important;
-        }
-
-        body:not(.en-mode):not(.mn-mode):not(.fa-mode) .slide-visual img {
-            aspect-ratio: 16 / 9;
-        }
     </style>
     <script>
         function forcePCView() {
@@ -1110,17 +1110,16 @@
                     <div class="product-info">
                         <p class="brand">EDEN</p>
                         <p class="name">
-                            <span class="lang-ko">01 에덴 화이트 클레이 백토 마스크 (나를 위한 <strong>쉼</strong>)</span>
-                            <span class="lang-en">01 EDEN White Clay Mask (Relaxation)</span>
+                            <span >01 에덴 화이트 클레이 백토 마스크 (나를 위한 <strong>쉼</strong>)</span>
+
                         </p>
                         <p class="price">
-                            <span class="lang-ko">
+                            <span >
                                 <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 4,000원
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">6,000원</span>
                             </span>
-                            <span class="lang-en">
-                                <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 4,000 WON
+                             4,000 WON
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">6,000
                                     WON</span>
@@ -1140,17 +1139,16 @@
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
                         <p class="name">
-                            <span class="lang-ko">02 비바더마 데일리 케어 마스크 시카</span>
-                            <span class="lang-en">02 VIVA DERMA DAILY CARE MASK CICA</span>
+                            <span >02 비바더마 데일리 케어 마스크 시카</span>
+
                         </p>
                         <p class="price">
-                            <span class="lang-ko">
+                            <span >
                                 <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                             </span>
-                            <span class="lang-en">
-                                <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000 WON
+                             1,000 WON
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500
                                     WON</span>
@@ -1168,17 +1166,16 @@
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
                         <p class="name">
-                            <span class="lang-ko">02 비바더마 데일리 케어 마스크 엑토인</span>
-                            <span class="lang-en">02 VIVA DERMA DAILY CARE MASK ECTOIN</span>
+                            <span >02 비바더마 데일리 케어 마스크 엑토인</span>
+
                         </p>
                         <p class="price">
-                            <span class="lang-ko">
+                            <span >
                                 <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                             </span>
-                            <span class="lang-en">
-                                <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000 WON
+                             1,000 WON
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500
                                     WON</span>
@@ -1191,25 +1188,24 @@
                 <a href="#niacinamide-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
                         <span class="product-badge">
-                            <span class="lang-ko">신상품</span>
-                            <span class="lang-en">NEW</span>
+                            <span >신상품</span>
+
                         </span>
                         <img src="niacinamide_mask_v2.png" alt="나이아신아마이드 마스크">
                     </div>
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
                         <p class="name">
-                            <span class="lang-ko">02 비바더마 데일리 케어 마스크 나이아신아마이드</span>
-                            <span class="lang-en">02 VIVA DERMA DAILY CARE MASK NIACINAMIDE</span>
+                            <span >02 비바더마 데일리 케어 마스크 나이아신아마이드</span>
+
                         </p>
                         <p class="price">
-                            <span class="lang-ko">
+                            <span >
                                 <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                             </span>
-                            <span class="lang-en">
-                                <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000 WON
+                             1,000 WON
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500
                                     WON</span>
@@ -1222,25 +1218,24 @@
                 <a href="#glutathione-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
                         <span class="product-badge">
-                            <span class="lang-ko">신상품</span>
-                            <span class="lang-en">NEW</span>
+                            <span >신상품</span>
+
                         </span>
                         <img src="glutathione_mask_v2.png" alt="글루타치온 마스크">
                     </div>
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
                         <p class="name">
-                            <span class="lang-ko">02 비바더마 데일리 케어 마스크 글루타치온</span>
-                            <span class="lang-en">02 VIVA DERMA DAILY CARE MASK GLUTATHIONE</span>
+                            <span >02 비바더마 데일리 케어 마스크 글루타치온</span>
+
                         </p>
                         <p class="price">
-                            <span class="lang-ko">
+                            <span >
                                 <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                             </span>
-                            <span class="lang-en">
-                                <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000 WON
+                             1,000 WON
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500
                                     WON</span>
@@ -1253,25 +1248,24 @@
                 <a href="#collagen-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
                         <span class="product-badge">
-                            <span class="lang-ko">신상품</span>
-                            <span class="lang-en">NEW</span>
+                            <span >신상품</span>
+
                         </span>
                         <img src="collagen_mask_v2.png" alt="콜라겐 마스크">
                     </div>
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
                         <p class="name">
-                            <span class="lang-ko">02 비바더마 데일리 케어 마스크 콜라겐</span>
-                            <span class="lang-en">02 VIVA DERMA DAILY CARE MASK COLLAGEN</span>
+                            <span >02 비바더마 데일리 케어 마스크 콜라겐</span>
+
                         </p>
                         <p class="price">
-                            <span class="lang-ko">
+                            <span >
                                 <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                             </span>
-                            <span class="lang-en">
-                                <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000 WON
+                             1,000 WON
                                 <span
                                     style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500
                                     WON</span>
@@ -1293,8 +1287,8 @@
                     </div>
                     <h3
                         style="font-family: 'Inter', sans-serif; font-size: 20px; color: #003366; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 20px;">
-                        <span class="lang-ko">01 에덴 화이트 클레이 백토 마스크</span>
-                        <span class="lang-en">01 EDEN WHITE CLAY MASK</span>
+                        <span >01 에덴 화이트 클레이 백토 마스크</span>
+
                     </h3>
                 </div>
 
@@ -1337,13 +1331,12 @@
             </div>
         </section>
 
-
         <!-- 비바더마 마스크팩 그룹 타이틀 -->
         <div class="story-title reveal" style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
             <h4
                 style="font-family: 'Inter', sans-serif; font-size: 20px; color: #003366; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;">
-                <span class="lang-ko">02 비바더마 데일리 케어 마스크 (5종)</span>
-                <span class="lang-en">02 VIVA DERMA DAILY CARE MASK (5 TYPES)</span>
+                <span >02 비바더마 데일리 케어 마스크 (5종)</span>
+
             </h4>
         </div>
 
@@ -1358,15 +1351,11 @@
                         <p class="brand"
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
-                        <h5 class="lang-ko"
+                        <h5 
                             style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
                             비바더마 데일리 케어 마스크 - 시카</h5>
-                        <h5 class="lang-en"
-                            style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            VIVA DERMA DAILY CARE MASK - CICA</h5>
 
                         <p class="tags lang-ko">#민감피부진정 #장벽강화솔루션 #4-시카콤플렉스</p>
-                        <p class="tags lang-en">#SENSITIVE SKIN SOOTHING #BARRIER CARE #4-CICA COMPLEX</p>
 
                         <div class="detail-info lang-ko">
                             <div class="info-item">
@@ -1383,9 +1372,6 @@
                             </div>
                         </div>
 
-                        <div class="detail-info lang-en">
-                            <div class="info-item">
-                                <span class="label">KEY INGREDIENT</span>
                                 <p class="desc">Centella Asiatica Extract - Rapidly soothes skin sensitized by external
                                     stressors.</p>
                             </div>
@@ -1400,7 +1386,6 @@
                                     healthier complexion.</p>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -1418,15 +1403,11 @@
                         <p class="brand"
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
-                        <h5 class="lang-ko"
+                        <h5 
                             style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
                             비바더마 데일리 케어 마스크 - 엑토인</h5>
-                        <h5 class="lang-en"
-                            style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            VIVA DERMA DAILY CARE MASK - ECTOIN</h5>
 
                         <p class="tags lang-ko">#수분자석 #강력보습 #엑토인솔루션</p>
-                        <p class="tags lang-en">#MOISTURE MAGNET #INTENSIVE HYDRATION #ECTOIN SOLUTION</p>
 
                         <div class="detail-info lang-ko">
                             <div class="info-item">
@@ -1443,9 +1424,6 @@
                             </div>
                         </div>
 
-                        <div class="detail-info lang-en">
-                            <div class="info-item">
-                                <span class="label">KEY INGREDIENT</span>
                                 <p class="desc">Ectoin - Acts as a powerful moisture magnet to safeguard skin from
                                     environmental stress.</p>
                             </div>
@@ -1460,7 +1438,6 @@
                                     elasticity.</p>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -1478,15 +1455,11 @@
                         <p class="brand"
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
-                        <h5 class="lang-ko"
+                        <h5 
                             style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
                             비바더마 데일리 케어 마스크 - 나이아신아마이드</h5>
-                        <h5 class="lang-en"
-                            style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            VIVA DERMA DAILY CARE MASK - NIACINAMIDE</h5>
 
                         <p class="tags lang-ko">#광채부스팅 #피지조절케어 #브라이트닝</p>
-                        <p class="tags lang-en">#GLOW BOOSTING #OIL CONTROL #BRIGHTENING</p>
 
                         <div class="detail-info lang-ko">
                             <div class="info-item">
@@ -1503,9 +1476,6 @@
                             </div>
                         </div>
 
-                        <div class="detail-info lang-en">
-                            <div class="info-item">
-                                <span class="label">KEY INGREDIENT</span>
                                 <p class="desc">Niacinamide - Inhibits melanin transfer to improve dark spots and
                                     brighten skin tone.</p>
                             </div>
@@ -1520,7 +1490,6 @@
                                     balance.</p>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -1538,15 +1507,11 @@
                         <p class="brand"
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
-                        <h5 class="lang-ko"
+                        <h5 
                             style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
                             비바더마 데일리 케어 마스크 - 글루타치온</h5>
-                        <h5 class="lang-en"
-                            style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            VIVA DERMA DAILY CARE MASK - GLUTATHIONE</h5>
 
                         <p class="tags lang-ko">#강력항산화 #탄력생기충전 #윤기케어</p>
-                        <p class="tags lang-en">#PREMIUM ANTIOXIDANT #VITALITY BOOSTER #GLOSS CARE</p>
 
                         <div class="detail-info lang-ko">
                             <div class="info-item">
@@ -1563,9 +1528,6 @@
                             </div>
                         </div>
 
-                        <div class="detail-info lang-en">
-                            <div class="info-item">
-                                <span class="label">KEY INGREDIENT</span>
                                 <p class="desc">Glutathione - Powerful antioxidant that inhibits active oxygen for vital
                                     radiance.</p>
                             </div>
@@ -1580,7 +1542,6 @@
                                     bouncy firmness.</p>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -1598,15 +1559,11 @@
                         <p class="brand"
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
-                        <h5 class="lang-ko"
+                        <h5 
                             style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
                             비바더마 데일리 케어 마스크 - 콜라겐</h5>
-                        <h5 class="lang-en"
-                            style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            VIVA DERMA DAILY CARE MASK - COLLAGEN</h5>
 
                         <p class="tags lang-ko">#모공케어 #탄력지원 #탱탱한피부</p>
-                        <p class="tags lang-en">#PORE CARE #ELASTICITY SUPPORT #PLUMP SKIN</p>
 
                         <div class="detail-info lang-ko">
                             <div class="info-item">
@@ -1632,8 +1589,8 @@
         <div class="story-title reveal" style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
             <h4
                 style="font-family: 'Inter', sans-serif; font-size: 20px; color: #003366; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;">
-                <span class="lang-ko">03 비바더마 마이크로 니들 트러블 패치</span>
-                <span class="lang-en">03 MICRO NEEDLE TROUBLE PATCH</span>
+                <span >03 비바더마 마이크로 니들 트러블 패치</span>
+
             </h4>
         </div>
 
@@ -1648,12 +1605,9 @@
                         <p class="brand"
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
-                        <h5 class="lang-ko"
+                        <h5 
                             style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
                             비바더마 마이크로 니들 트러블 패치</h5>
-                        <h5 class="lang-en"
-                            style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            MICRO NEEDLE TROUBLE PATCH</h5>
 
                         <p class="tags lang-ko">#악화되기전진정 #심층타겟케어 #스팟집중솔루션</p>
 
@@ -1672,7 +1626,6 @@
                                 <p class="desc">15mm의 넉넉한 대형 사이즈로 어떤 크기의 트러블도 완벽하게 커버하며, 피부에 굴곡 없이 밀착됩니다.</p>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -1737,21 +1690,19 @@
                             style="font-size: 14px; letter-spacing: 0.2em; opacity: 1; margin-bottom: 10px; color: #1565C0; font-weight: 700;">
                             BRAND STORY
                         </p>
-                        <h3 class="lang-ko"
+                        <h3 
                             style="font-size: 36px; line-height: 1.3; color: #0D47A1; font-weight: 900;">
                             타협하지 않는<br>자연주의 철학</h3>
 
-                        <p class="lang-ko"
+                        <p 
                             style="margin-bottom: 30px; opacity: 1; font-size: 15px; font-weight: 800; color: #37474F;">
                             피부에
                             닿는 그 순간까지,<br>자연 그대로의 생명력을 온전히 담았습니다.</p>
 
-                        <a href="#" class="lang-ko"
+                        <a href="#" 
                             style="border-bottom: 1px solid #0D47A1; color: #0D47A1; font-weight: 600;">Han Soo 이야기
                             보기</a>
-                        <a href="#" class="lang-en"
-                            style="border-bottom: 1px solid #0D47A1; color: #0D47A1; font-weight: 600;">View Han Soo's
-                            Story</a>
+
                     </div>
                     <!-- 고객 후기: 산뜻하고 깨끗한 이미지 -->
                     <div id="real-reviews" class="banner-item reveal"
@@ -1759,28 +1710,18 @@
                         <p
                             style="font-size: 14px; letter-spacing: 0.2em; opacity: 1; margin-bottom: 10px; color: #00695C; font-weight: 700;">
                             REAL REVIEW</p>
-                        <h3 class="lang-ko"
+                        <h3 
                             style="font-size: 36px; line-height: 1.3; color: #004D40; font-weight: 900;">
                             98%가 경험한<br>놀라운 피부 변화</h3>
-                        <h3 class="lang-en"
-                            style="font-size: 36px; line-height: 1.3; color: #004D40; font-weight: 900;">
-                            AMAZING SKIN TRANSFORMATION<br>EXPERIENCED BY 98%</h3>
 
-                        <p class="lang-ko"
+                        <p 
                             style="margin-bottom: 30px; opacity: 1; font-size: 15px; font-weight: 800; color: #37474F;">
                             "역시
                             Han Soo - 성진은 다르네요."<br>고객님들의 생생한 찐후기를 확인하세요.</p>
-                        <p class="lang-en"
-                            style="margin-bottom: 30px; opacity: 1; font-size: 15px; font-weight: 800; color: #37474F;">
-                            "Indeed, Han Soo - The excellence is truly different."<br>Check out authentic reviews from
-                            our
-                            customers.</p>
 
-                        <a href="#" class="lang-ko"
+                        <a href="#" 
                             style="border-bottom: 1px solid #004D40; color: #004D40; font-weight: 600;">베스트 리뷰 확인</a>
-                        <a href="#" class="lang-en"
-                            style="border-bottom: 1px solid #004D40; color: #004D40; font-weight: 600;">Check Best
-                            Reviews</a>
+
                     </div>
                 </div>
 
@@ -1791,64 +1732,46 @@
         <div class="footer-inner">
             <div>
                 <h4 class="footer-logo lang-ko">Han Soo - 성진</h4>
-                <h4 class="footer-logo lang-en">Han Soo - Sincerity</h4>
 
-                <p class="lang-ko" style="font-weight: 800;">경북 영천시 망정 1길 171번지</p>
-                <p class="lang-en" style="font-weight: 800;">171, Mangjeong 1-gil, Yeongcheon-si, Gyeongbuk, Korea</p>
+                <p  style="font-weight: 800;">경북 영천시 망정 1길 171번지</p>
 
-                <p class="lang-ko" style="font-weight: 800;">고객센터: 1544-0000 | 이메일: spoindo@naver.com</p>
-                <p class="lang-en" style="font-weight: 800;">Customer Center: 1544-0000 | Email: spoindo@naver.com</p>
+                <p  style="font-weight: 800;">고객센터: 1544-0000 | 이메일: spoindo@naver.com</p>
 
-                <p class="lang-ko" style="font-weight: 800;">평일 10:00 - 17:00 (점심시간 12:30 - 13:30 / 토, 일, 공휴일 휴무)</p>
-                <p class="lang-en" style="font-weight: 800;">Mon-Fri 10:00 - 17:00 (Lunch 12:30 - 13:30 / Sat, Sun,
-                    Holiday Closed)</p>
+                <p  style="font-weight: 800;">평일 10:00 - 17:00 (점심시간 12:30 - 13:30 / 토, 일, 공휴일 휴무)</p>
+
             </div>
             <div>
-                <p class="lang-ko" style="font-weight: 700; margin-bottom: 20px; color: #000;">쇼핑가이드</p>
-                <p class="lang-en" style="font-weight: 700; margin-bottom: 20px; color: #000;">SHOPPING GUIDE</p>
+                <p  style="font-weight: 700; margin-bottom: 20px; color: #000;">쇼핑가이드</p>
 
-                <p class="lang-ko">주문 목록</p>
-                <p class="lang-en">Order List</p>
+                <p >주문 목록</p>
 
-                <p class="lang-ko">장바구니</p>
-                <p class="lang-en">Shopping Cart</p>
+                <p >장바구니</p>
 
-                <p class="lang-ko">관심 상품</p>
-                <p class="lang-en">Wishlist</p>
+                <p >관심 상품</p>
+
             </div>
             <div>
-                <p class="lang-ko" style="font-weight: 700; margin-bottom: 20px; color: #000;">고객지원</p>
-                <p class="lang-en" style="font-weight: 700; margin-bottom: 20px; color: #000;">SUPPORT</p>
+                <p  style="font-weight: 700; margin-bottom: 20px; color: #000;">고객지원</p>
 
-                <p class="lang-ko">이용약관</p>
-                <p class="lang-en">Terms of Use</p>
+                <p >이용약관</p>
 
-                <p class="lang-ko">개인정보처리방침</p>
-                <p class="lang-en">Privacy Policy</p>
+                <p >개인정보처리방침</p>
 
-                <p class="lang-ko">회사소개</p>
-                <p class="lang-en">About Us</p>
+                <p >회사소개</p>
+
             </div>
             <div>
                 <p style="font-weight: 700; margin-bottom: 20px; color: #000;">NEWSLETTER</p>
-                <p class="lang-ko">한수의 새로운 소식과 혜택을 받아보세요.</p>
-                <p class="lang-en">Receive the latest news and benefits from Han Soo.</p>
-                <div style="border-bottom: 1px solid #ccc; margin-top: 20px; padding-bottom: 5px; display: flex;">
-                    <input type="text" placeholder="Email Address" class="lang-en"
-                        style="border: none; outline: none; flex: 1; background: transparent;">
-                    <input type="text" placeholder="이메일 주소" class="lang-ko"
-                        style="border: none; outline: none; flex: 1; background: transparent;">
+                <p >한수의 새로운 소식과 혜택을 받아보세요.</p>
 
-                    <button class="lang-ko"
-                        style="border: none; background: none; font-weight: 700; font-size: 11px;">구독하기</button>
-                    <button class="lang-en"
-                        style="border: none; background: none; font-weight: 700; font-size: 11px;">SUBSCRIBE</button>
+                <div style="border-bottom: 1px solid #ccc; margin-top: 20px; padding-bottom: 5px; display: flex;">
+
                 </div>
             </div>
         </div>
         <div style="margin-top: 50px; text-align: center; color: #bbb; font-size: 11px;">
-            <span class="lang-ko">&copy; 2026 EDEN. 모든 권리 보유.</span>
-            <span class="lang-en">&copy; 2026 EDEN. All Rights Reserved.</span>
+            <span >&copy; 2026 EDEN. 모든 권리 보유.</span>
+
         </div>
     </footer>
 
@@ -1939,15 +1862,6 @@
             }
         }
 
-        // 글로벌 다국어 전환 기능
-        function setLanguage(lang) {
-            document.body.classList.remove('en-mode', 'mn-mode', 'fa-mode');
-            document.querySelectorAll('.lang-toggle span').forEach(el => el.classList.remove('active'));
-
-            if (lang !== 'ko') {
-                document.body.classList.add(lang + '-mode');
-            }
-
             const activeBtn = document.getElementById('btn-' + lang);
             if (activeBtn) activeBtn.classList.add('active');
 
@@ -1962,8 +1876,6 @@
 
         // 초기 언어 설정 및 초기화 통합
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('pref-lang') || 'ko';
-            setLanguage(savedLang);
 
             // Eden Mask Slider
             new ImageSlider('eden-slider', 0);
