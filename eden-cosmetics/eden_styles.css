@@ -516,6 +516,25 @@ a {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
+transition: var(--transition-smooth);
+}
+
+.story-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Story Slider Styles */
+.story-slider-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
 .story-slider {
     display: flex;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -530,450 +549,11 @@ a {
 .story-slide img {
     width: 100%;
     max-width: 1000px;
-    /* 강제 너비 제한 */
     aspect-ratio: 16 / 9;
-    /* 비율 칼고정 */
     display: block;
     object-fit: cover;
-    /* 상자에 꽉 채워서 크기 차이 제거 */
 }
 
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.7);
-    color: var(--text-dark);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    z-index: 10;
-    transition: var(--transition-fast);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.slider-arrow:hover {
-    background: var(--primary-green);
-    color: var(--white);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.slider-arrow.prev {
-    left: 20px;
-}
-
-.slider-arrow.next {
-    right: 20px;
-}
-
-.slider-dots {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 12px;
-    z-index: 10;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: var(--transition-fast);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.dot.active {
-    background: var(--primary-green);
-    transform: scale(1.2);
-    box-shadow: 0 0 10px rgba(99, 136, 111, 0.5);
-}
-
-/* ===================================
-   Pricing Section
-   =================================== */
-.pricing {
-    padding: 100px 0;
-    background: var(--beige);
-}
-
-.pricing-card {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--white);
-    border-radius: 30px;
-    padding: 60px 50px;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-}
-
-.pricing-card h3 {
-    font-family: var(--font-display);
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-}
-
-.special-badge {
-    display: inline-block;
-    background: var(--primary-green);
-    color: var(--white);
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-.price-container {
-    margin-bottom: 40px;
-}
-
-.original-price {
-    display: block;
-    font-size: 20px;
-    color: var(--text-gray);
-    text-decoration: line-through;
-    margin-bottom: 10px;
-}
-
-.current-price {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 15px;
-}
-
-.price {
-    font-size: 56px;
-    font-weight: 900;
-    color: var(--text-dark);
-}
-
-.discount {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-green);
-}
-
-.buy-button {
-    width: 100%;
-    background: var(--primary-green);
-    color: var(--white);
-    padding: 20px;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    transition: var(--transition-fast);
-}
-
-.buy-button:hover {
-    background: #4f6d5a;
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(99, 136, 111, 0.3);
-}
-
-.benefits-list {
-    border-top: 1px solid var(--border-light);
-    padding-top: 30px;
-    text-align: left;
-}
-
-.benefit {
-    font-size: 15px;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-    padding-left: 10px;
-}
-
-/* ===================================
-   Customer Reviews
-   =================================== */
-.reviews {
-    padding: 100px 0;
-    background: var(--white);
-}
-
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.review-card {
-    background: var(--soft-blue);
-    border-radius: 20px;
-    padding: 20px;
-    transition: var(--transition-smooth);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.review-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.review-card img {
-    width: 100%;
-    aspect-ratio: 2 / 3;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-/* ===================================
-   Footer
-   =================================== */
-.footer {
-    background: var(--white);
-    /* Changed to white as per image hint or clean look */
-    padding: 80px 0 40px;
-    border-top: 1px solid var(--border-light);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr;
-    gap: 40px;
-    margin-bottom: 60px;
-    text-align: left;
-}
-
-.footer-logo h2 {
-    font-family: var(--font-display);
-    font-size: 28px;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-}
-
-.footer-info p {
-    font-size: 13px;
-    color: var(--text-gray);
-    line-height: 1.8;
-    margin-bottom: 5px;
-}
-
-.footer-col h3 {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 25px;
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    font-size: 13px;
-    color: var(--text-gray);
-    transition: var(--transition-fast);
-}
-
-.footer-links a:hover {
-    color: var(--text-dark);
-    text-decoration: underline;
-}
-
-.newsletter-desc {
-    font-size: 13px;
-    color: var(--text-gray);
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.newsletter-form {
-    display: flex;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-}
-
-.newsletter-form input {
-    flex: 1;
-    border: none;
-    padding: 10px 0;
-    font-size: 13px;
-    color: var(--text-dark);
-    outline: none;
-    background: transparent;
-}
-
-.newsletter-form input::placeholder {
-    color: #ccc;
-}
-
-.newsletter-form button {
-    background: none;
-    border: none;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-dark);
-    cursor: pointer;
-    padding: 0 10px;
-}
-
-.footer-bottom {
-    border-top: 1px solid var(--border-light);
-    padding-top: 30px;
-    text-align: left;
-    /* Align left copyright if needed */
-}
-
-.copyright {
-    font-size: 12px;
-    color: #999;
-}
-
-/* ===================================
-   Responsive Design
-   =================================== */
-
-/* Tablet */
-@media (max-width: 0px) {
-    .container {
-        padding: 0 30px;
-    }
-
-    .hero-title {
-        font-size: 48px;
-    }
-
-    .highlights-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .details-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .nav {
-        display: none;
-    }
-}
-
-/* Mobile */
-@media (max-width: 0px) {
-    .container {
-        padding: 0 20px;
-    }
-
-    .header-container {
-        padding: 0 20px;
-    }
-
-    .hero {
-        min-height: 70vh;
-        padding: 40px 20px;
-    }
-
-    .hero-content {
-        padding: 40px 30px;
-    }
-
-    .hero-title {
-        font-size: 36px;
-    }
-
-    .hero-tagline {
-        font-size: 24px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .section-header h2 {
-        font-size: 32px;
-    }
-
-    .highlights,
-    .product-details,
-    .product-story,
-    .pricing,
-    .reviews {
-        padding: 60px 0;
-    }
-
-    .details-image {
-        padding: 40px;
-    }
-
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .reviews-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-card {
-        padding: 40px 30px;
-    }
-
-    .price {
-        font-size: 42px;
-    }
-
-    .cta-button {
-        display: none;
-    }
-}
-
-/* Product Story Slider Styles */
-.story-slider-container {
-    position: relative;
-    max-width: 1000px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    background: #fff;
-}
-
-.story-slider {
-    display: flex;
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    width: 100%;
-}
-
-.story-slide {
-    min-width: 100%;
-    flex-shrink: 0;
-}
-
-.story-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-/* Slider Controls */
 .slider-arrow {
     position: absolute;
     top: 50%;
@@ -986,7 +566,7 @@ a {
     border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
-    color: #333;
+    color: var(--text-dark);
     z-index: 10;
     display: flex;
     align-items: center;
@@ -996,7 +576,8 @@ a {
 }
 
 .slider-arrow:hover {
-    background: #fff;
+    background: var(--primary-green);
+    color: var(--white);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -1028,7 +609,97 @@ a {
 }
 
 .dot.active {
-    background: #4A90E2;
+    background: var(--primary-green);
     width: 25px;
     border-radius: 5px;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 100px 0;
+    background: var(--beige);
+}
+
+.pricing-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 30px;
+    padding: 60px 50px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section */
+.footer {
+    background: var(--white);
+    padding: 80px 0 40px;
+    border-top: 1px solid var(--border-light);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #999;
+}
+
+/* ===================================
+   Responsive Design (수정됨: 0px -> 실제 수치)
+   =================================== */
+
+/* Tablet (768px 이하) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+/* Mobile (480px 이하) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
+
+    .highlights,
+    .product-details,
+    .product-story,
+    .pricing,
+    .reviews {
+        padding: 60px 0;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
 }
