@@ -904,63 +904,93 @@
 
 
 
-        /* 에덴 슬라이더 글로벌 인포그래픽 레이아웃 (4단 그리드) */
+        /* 에덴 & 트러블패치 슬라이더 개선 레이아웃 (세로형 번역 박스) */
         .slide-content {
             display: flex;
+            flex-direction: column;
             width: 100%;
-            height: 100%;
             background: #fff;
         }
 
         .slide-visual {
-            flex: 1.2;
-            overflow: hidden;
+            width: 100%;
+            height: 480px; /* 이미지 영역 고정 */
+            background: #f8f9fa;
             display: flex;
             align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
 
         .slide-visual img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
-
-        .slide-info-grid {
-            flex: 1.2;
-            /* 가로로 넓게 쓰도록 조정 */
+            object-fit: contain; /* 이미지 전체가 보이도록 */
             padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            /* 옆으로 4개 나란히 */
-            gap: 12px;
-            background: #f1f4f8;
         }
 
-        .info-box {
+        /* 영문 번역 박스 스타일 (사용자 목업 기반) */
+        .translation-box {
+            padding: 40px 30px;
             background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            border-top: 3px solid #003366;
+            border-top: 1px solid #eee;
+            text-align: center;
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: center;
-            text-align: center;
+            min-height: 200px; /* 텍스트 공간 확보 */
         }
 
-        .info-box h4 {
-            font-size: 13px;
+        .translation-inner {
+            max-width: 700px;
+            width: 100%;
+            padding: 25px;
+            border: 2px solid #003366; /* 사용자 목업의 남색 테두리 */
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .translation-inner h4 {
+            font-size: 22px;
             color: #003366;
-            margin-bottom: 8px;
+            margin-bottom: 15px;
             font-weight: 800;
             text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .info-box p {
-            font-size: 11px;
+        .translation-inner p {
+            font-size: 15px;
             color: #444;
-            line-height: 1.5;
+            line-height: 1.7;
             word-break: keep-all;
+            margin: 0;
+        }
+
+        .translation-inner .highlight {
+            color: #003366;
+            font-weight: 700;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* 반응형 모바일 설정 */
+        @media (max-width: 768px) {
+            .slide-visual {
+                height: 350px;
+            }
+            .translation-box {
+                padding: 20px;
+                min-height: auto;
+            }
+            .translation-inner h4 {
+                font-size: 18px;
+            }
+            .translation-inner p {
+                font-size: 14px;
+            }
         }
 
         /* Show info grid in all modes including Korean */
@@ -1176,25 +1206,79 @@
 
                 <div class="story-slider-container">
                     <div class="story-slider">
-                        <!-- Slide 1 -->
+                        <!-- Slide 1: Main (Rest & Harmony) -->
                         <div class="story-slide active">
-                            <img src="image updated/Gemini_Generated_Image_8nxm5u8nxm5u8nxm.png" alt="Slide 1">
+                            <div class="slide-content">
+                                <div class="slide-visual">
+                                    <img src="image updated/Gemini_Generated_Image_8nxm5u8nxm5u8nxm.png" alt="Eden White Clay Mask">
+                                </div>
+                                <div class="translation-box">
+                                    <div class="translation-inner">
+                                        <h4>REST FOR ME, NATURE MEETS SCIENCE</h4>
+                                        <p>Experience a premium bio-active solution crafted with Quantum Energy and White Clay. Give your tired skin the pure, refreshing rest it deserves.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Slide 2 -->
+
+                        <!-- Slide 2: BSK305 White Clay (Minerals) -->
                         <div class="story-slide">
-                            <img src="eden-cosmetics/detail_2.png" alt="Slide 2">
+                            <div class="slide-content">
+                                <div class="slide-visual">
+                                    <img src="eden-cosmetics/detail_2.png" alt="Rare BSK305 White Clay">
+                                </div>
+                                <div class="translation-box">
+                                    <div class="translation-inner">
+                                        <h4>BSK305: SOIL(=WHITE CLAY) OF LIVING LIFE</h4>
+                                        <p>Featuring rare White Clay extracted at high purity. Rich in essential minerals like Silica, Calcium, and Magnesium that preserve natural energy. 100% eco-friendly with zero chemical additives.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Slide 3 -->
+
+                        <!-- Slide 3: Energy Science (Quantum/Infrared) -->
                         <div class="story-slide">
-                            <img src="eden-cosmetics/detail_3.png" alt="Slide 3">
+                            <div class="slide-content">
+                                <div class="slide-visual">
+                                    <img src="eden-cosmetics/detail_3.png" alt="Triple Energy Science">
+                                </div>
+                                <div class="translation-box">
+                                    <div class="translation-inner">
+                                        <h4>3 ENERGY SCIENCES DELIVERED DEEP INTO THE SKIN</h4>
+                                        <p>Quantum Energy for cell activation, Far-Infrared for 80x deeper penetration, and Anions for skin purification. A scientifically proven formula for skin resilience.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Slide 4 -->
+
+                        <!-- Slide 4: Adsorption & Adhesion (Pores) -->
                         <div class="story-slide">
-                            <img src="eden-cosmetics/detail_4.png" alt="Slide 4">
+                            <div class="slide-content">
+                                <div class="slide-visual">
+                                    <img src="eden-cosmetics/detail_4.png" alt="Adsorption & Adhesion Technology">
+                                </div>
+                                <div class="translation-box">
+                                    <div class="translation-inner">
+                                        <h4>STRONG ADSORPTION AND PERFECT ADHESION</h4>
+                                        <p>The honeycomb porous structure adsorbs impurities and heavy metals, while the nano-bio amino acid silk fabric ensures a perfect, seamless fit for intensive care.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Slide 5 -->
+
+                        <!-- Slide 5: 4-in-1 Total Solution -->
                         <div class="story-slide">
-                            <img src="image updated/Gemini_Generated_Image_v8odsjv8odsjv8od.png" alt="Slide 5">
+                            <div class="slide-content">
+                                <div class="slide-visual">
+                                    <img src="image updated/Gemini_Generated_Image_v8odsjv8odsjv8od.png" alt="4-in-1 Care Result">
+                                </div>
+                                <div class="translation-box">
+                                    <div class="translation-inner">
+                                        <h4>4-IN-1 TOTAL CARE FOR CLEAR AND TRANSPARENT SKIN</h4>
+                                        <p>A comprehensive professional solution providing Deep Cleansing (Pores), Soothing (Relief), Moisturizing (Elasticity), and Whitening (Radiance) for complete skin transformation.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -1443,28 +1527,47 @@
                 <div id="trouble-patch-slider" class="story-container reveal"
                     style="max-width: 800px; margin: 0 auto; position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     <div class="slider-track" style="display: flex; transition: transform 0.5s ease-in-out;">
-                        <!-- 슬라이드 1 -->
+                        <!-- Slide 1: Precision Delivery -->
                         <div class="slide" style="min-width: 100%;">
-                            <div class="info-card" style="border: none;">
-                                <div class="info-card-img" style="height: 250px;">
-                                    <img src="trouble_patch_delivery_ko.png" alt="Precision deep delivery system">
+                            <div class="slide-content">
+                                <div class="slide-visual">
+                                    <img src="trouble_patch_delivery_ko.png" alt="Precision Delivery System">
+                                </div>
+                                <div class="translation-box">
+                                    <div class="translation-inner">
+                                        <h4>SAFE. RAPID. DEEP DELIVERY.</h4>
+                                        <p>Soothing ingredients are delivered directly to problem areas, acting quickly and effectively where they are most needed. Beyond simply applying it, how it reaches deep into the skin makes a difference in the results. A sophisticated micro-system penetrates active ingredients deep into the skin, providing an immediate, targeted soothing effect.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 슬라이드 2 -->
+
+                        <!-- Slide 2: Hygienic Case -->
                         <div class="slide" style="min-width: 100%;">
-                            <div class="info-card" style="border: none;">
-                                <div class="info-card-img" style="height: 250px;">
-                                    <img src="trouble_patch_coverage_info.jpg" alt="15mm large size seamless cover">
+                            <div class="slide-content">
+                                <div class="slide-visual">
+                                    <img src="trouble_patch_case_info.png" alt="Hygienic Storage Case">
+                                </div>
+                                <div class="translation-box">
+                                    <div class="translation-inner">
+                                        <h4>KEEP IT NEAT IN A HYGIENIC DEDICATED CASE</h4>
+                                        <p>Put unused patches in the dedicated storage case.<br>It can be managed safely and hygienically.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 슬라이드 3 -->
+
+                        <!-- Slide 3: Wide Coverage -->
                         <div class="slide" style="min-width: 100%;">
-                            <div class="info-card" style="border: none;">
-                                <div class="info-card-img" style="height: 250px;">
-                                    <img src="trouble_patch_case_info.png" alt="Hygienic case storage guide"
-                                        style="display: block; margin: 0 auto;">
+                            <div class="slide-content">
+                                <div class="slide-visual">
+                                    <img src="trouble_patch_coverage_info.jpg" alt="15mm Wide Coverage">
+                                </div>
+                                <div class="translation-box">
+                                    <div class="translation-inner">
+                                        <h4>15MM DIAMETER, PERFECT CLOSE FIT COVER</h4>
+                                        <p>The wide patch adheres firmly and seamlessly to the problem area. Each patch contains approximately 200 soluble micropoints, precisely designed to deliver active ingredients deep into the skin, enabling intensive and convenient external care.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
