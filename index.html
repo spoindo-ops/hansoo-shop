@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Force Deploy: 2026-02-25 14:05 -->
 <html lang="ko" style="scroll-behavior: smooth;">
 
 <head>
@@ -93,6 +92,8 @@
             /* grayscale(1): 완전 무채색(순수 실버) / contrast(1.3): 금속질감 */
         }
 
+
+
         * {
             margin: 0;
             padding: 0;
@@ -105,7 +106,6 @@
             background-color: var(--white);
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
-            min-width: 1400px;
         }
 
         a {
@@ -200,104 +200,82 @@
             font-size: 14px;
         }
 
-        /* Hero Section (Matched with eden_mask.html) */
+        /* Hero */
         .main-hero {
-            position: relative;
-            width: 100%;
-            max-width: none;
-            aspect-ratio: 100 / 48;
-            background-color: #ffffff;
+            min-height: 85vh;
+            background: url('image updated/Gemini_Generated_Image_hmofbzhmofbzhmof.png');
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             text-align: left;
-            padding: 0 5%;
-            overflow: hidden;
+            padding: 60px 3%;
         }
 
-        .main-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 1400px;
-            height: 100%;
-            background-image: url('image updated/hero_bg_compressed.jpg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            filter: brightness(1.05);
-            z-index: 1;
-        }
-
-        .main-hero .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 260px;
-            background: rgba(0, 0, 0, 0.45);
+        .hero-content {
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.25);
             backdrop-filter: blur(10px);
-            padding: 18px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: -30px;
-            margin-left: calc((100% - 1400px) / 2 + 180px);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .main-hero .hero-subtitle {
-            font-size: 10px;
+        .hero-subtitle {
+            font-size: 13px;
             font-weight: 700;
             letter-spacing: 0.3em;
-            color: #FFD700;
-            margin-bottom: 12px;
+            color: var(--white);
+            margin-bottom: 20px;
             text-transform: uppercase;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
         }
 
-        .main-hero .hero-title {
+        .hero-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
+            font-size: 48px;
             font-weight: 300;
             letter-spacing: 0.05em;
-            color: #ffffff;
-            margin-bottom: 8px;
+            color: var(--white);
+            margin-bottom: 12px;
             line-height: 1.2;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
         }
 
-        .main-hero .hero-tagline {
-            font-size: 18px;
+        .hero-tagline {
+            font-size: 28px;
             font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 10px;
+            color: var(--white);
+            margin-bottom: 15px;
             text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
             white-space: nowrap;
         }
 
-        .main-hero .hero-description {
-            font-size: 13px;
-            color: #ffffff;
-            margin-bottom: 25px;
+        .hero-description {
+            font-size: 18px;
+            color: var(--white);
+            margin-bottom: 40px;
             letter-spacing: 0.05em;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
         }
 
-        .main-hero .hero-cta {
-            display: inline-block;
-            background: var(--white);
+        .hero-cta {
+            background-color: var(--white);
             color: var(--text-dark);
-            padding: 14px 40px;
+            padding: 18px 60px;
             border-radius: 50px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
+            cursor: pointer;
             border: 2px solid rgba(255, 255, 255, 0.5);
             transition: var(--transition-fast);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: inline-block;
             text-decoration: none;
         }
 
-        .main-hero .hero-cta:hover {
+        .hero-cta:hover {
             background-color: var(--secondary-green);
             color: var(--white);
             transform: translateY(-3px);
@@ -396,15 +374,20 @@
         }
 
         .product-info .name {
-            font-size: 15px;
+            font-size: 13px;
+            /* 조금 더 콤팩트하게 조정 */
+            font-weight: 800;
+            color: #000000;
+            /* 블랙으로 변경 */
             margin-bottom: 10px;
-            height: 45px;
+            height: 40px;
             overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             line-clamp: 2;
-            /* 표준 속성 추가 */
             -webkit-box-orient: vertical;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
         }
 
         .product-info .price {
@@ -419,26 +402,227 @@
             border-top: 1px solid var(--gray-200);
         }
 
-        .story-group {
-            margin-bottom: 120px;
+        /* ===================================
+           EDEN Hero Section (Restored & Optimized)
+           =================================== */
+        .hero {
+            position: relative;
+            width: 100%;
+            max-width: none;
+            aspect-ratio: 100 / 48;
+            /* 이미지 비율에 딱 맞게 고정하여 하단 글림이 절대 잘리지 않음 */
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            padding: 0 5%;
+            overflow: hidden;
+            margin-bottom: 60px;
         }
 
-        .story-group:last-child {
-            margin-bottom: 0;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1600px;
+            /* 에덴 원본(1400px)보다 약간만, 적당히 키움 */
+            height: 100%;
+            background-image: url('image updated/hero_bg_compressed.jpg');
+            background-size: contain;
+            /* 이미지가 잘리지 않고 100% 온전히 보이도록 설정 */
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
         }
 
-        .story-container {
-            max-width: 1200px;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 280px;
+            /* 대표님 지시대로 사각형 박스 원래 크기로 대폭 축소 */
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            /* 박스를 1600px 컨테이너에 맞춰 좌측으로 배치 */
+            margin-top: -30px;
+            margin-left: calc((100% - 1600px) / 2 + 180px);
+        }
+
+        @media (max-width: 1600px) {
+            .hero-content {
+                margin-left: 8%;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 10px;
+            /* 기존 크기 유지 */
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            color: #FFD700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            /* 폰트도 함께 축소 */
+            font-weight: 300;
+            color: #ffffff;
+            margin-bottom: 8px;
+            line-height: 1.2;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+        }
+
+        .hero-tagline {
+            font-size: 18px;
+            /* 태그라인 축소 */
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+            white-space: nowrap;
+        }
+
+        .hero-description {
+            font-size: 13px;
+            color: #ffffff;
+            margin-bottom: 25px;
+            letter-spacing: 0.05em;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-cta {
+            background: #ffffff;
+            color: #111;
+            padding: 12px 35px;
+            /* 버튼 크기 축소 */
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-cta:hover {
+            background: #63886f !important;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            border-color: #63886f;
+        }
+
+        /* ===================================
+           EDEN Slider System (Restored from Original)
+           =================================== */
+        .story-slider-container {
+            position: relative;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 40px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-slider {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 100%;
+        }
+
+        .story-slide {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+
+        .story-slide img {
+            width: 100%;
+            max-width: 1000px;
+            aspect-ratio: 16 / 9;
+            display: block;
+            object-fit: cover;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            color: #333;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 10;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .slider-arrow:hover {
+            background: #63886f;
+            color: #fff;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-arrow.prev {
+            left: 20px;
+        }
+
+        .slider-arrow.next {
+            right: 20px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .dot.active {
+            background: #63886f;
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(99, 136, 111, 0.5);
+        }
+
+        .story-group {
+            margin-bottom: 50px;
         }
 
         .story-flex {
             display: flex;
             align-items: center;
-            gap: 80px;
+            gap: 40px;
             background-color: #fcfcfc;
-            padding: 60px;
+            padding: 40px;
             border-radius: 20px;
         }
 
@@ -480,63 +664,44 @@
 
         .detail-info {
             border-top: none;
-            padding-top: 30px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            padding-top: 15px;
+            display: flex !important;
+            flex-direction: column;
+            gap: 0;
         }
 
         .info-item {
             margin-bottom: 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            border: 1px solid #e9ecef;
-            border-radius: 16px;
-            padding: 24px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-bottom: none;
+            border-radius: 0;
+            padding: 20px 24px;
+            transition: background 0.3s ease;
             position: relative;
-            overflow: hidden;
         }
 
-        .info-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--primary-blue) 0%, var(--secondary-green) 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
+        .info-item:first-child {
+            border-radius: 16px 16px 0 0;
+        }
+
+        .info-item:last-child {
+            border-bottom: 1px solid #e0e0e0;
+            border-radius: 0 0 16px 16px;
         }
 
         .info-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-            border-color: var(--primary-blue);
-        }
-
-        .info-item:hover::before {
-            opacity: 1;
+            background: #fafafa;
         }
 
         .info-item .label {
             font-weight: 700;
             font-size: 15px;
             color: var(--secondary-green);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-
-        .info-item .label::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
         }
 
         .info-item:nth-child(1) .label::before {
@@ -558,17 +723,12 @@
             font-size: 15px;
             color: #555;
             line-height: 1.6;
+            margin: 0;
         }
 
         /* 각 카드별 산뜻한 색상 */
         .info-item:nth-child(1) {
-            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
             border-left: 4px solid #4caf50;
-        }
-
-        .info-item:nth-child(1):hover {
-            border-color: #4caf50;
-            box-shadow: 0 12px 24px rgba(76, 175, 80, 0.15);
         }
 
         .info-item:nth-child(1) .label {
@@ -576,13 +736,7 @@
         }
 
         .info-item:nth-child(2) {
-            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
             border-left: 4px solid #2196f3;
-        }
-
-        .info-item:nth-child(2):hover {
-            border-color: #2196f3;
-            box-shadow: 0 12px 24px rgba(33, 150, 243, 0.15);
         }
 
         .info-item:nth-child(2) .label {
@@ -590,13 +744,7 @@
         }
 
         .info-item:nth-child(3) {
-            background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
             border-left: 4px solid #ffc107;
-        }
-
-        .info-item:nth-child(3):hover {
-            border-color: #ffc107;
-            box-shadow: 0 12px 24px rgba(255, 193, 7, 0.15);
         }
 
         .info-item:nth-child(3) .label {
@@ -686,7 +834,7 @@
             margin-bottom: 25px;
         }
 
-        @media (max-width: 0px) {
+        @media (max-width: 1024px) {
             .product-list {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -770,111 +918,154 @@
             object-position: center !important;
         }
 
-        @media (max-width: 0px) {
-            section.main-section {
-                padding: 60px 20px;
-            }
-
-            .main-hero {
+        @media (max-width: 768px) {
+            .hero, .main-hero {
+                aspect-ratio: auto;
                 height: 60vh;
+                padding: 0 20px;
+                justify-content: center;
+                text-align: center;
             }
-
-            .main-hero h1 {
-                font-size: 36px;
-            }
-
-            .section-title h2 {
-                font-size: 28px;
-            }
-
-            .product-list {
-                grid-template-columns: 1fr;
-                /* 모바일에서는 1열로 변경하여 시원하게 노출 */
-                gap: 40px;
-            }
-
-            .story-flex {
-                flex-direction: column;
-                gap: 40px;
-                padding: 30px 20px;
-            }
-
-            .story-visual {
-                height: 350px;
+            .hero::before, .main-hero::before {
+                background-size: cover;
                 width: 100%;
+                max-width: none;
+            }
+            .hero-content {
+                margin: 0 !important;
+                max-width: 90%;
                 padding: 20px;
             }
-
+            .hero-title {
+                font-size: 28px;
+            }
+            .hero-tagline {
+                font-size: 16px;
+            }
+            .product-list {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .story-flex {
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 30px;
+            }
+            .story-visual {
+                height: 300px;
+                flex: none;
+                width: 100%;
+            }
+            .story-content {
+                width: 100%;
+                text-align: center;
+            }
             .story-content h5 {
                 font-size: 24px;
-                text-align: center;
             }
-
-            .story-content .tags {
-                text-align: center;
-                font-size: 13px;
+            .detail-info {
+                text-align: left;
             }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .slider-btn {
-                width: 30px !important;
-                height: 30px !important;
-                font-size: 16px !important;
-                left: 10px !important;
-            }
-
-            .slider-btn.next {
-                left: auto !important;
-                right: 10px !important;
-            }
-
             .banner-box {
                 grid-template-columns: 1fr;
             }
-
             .banner-item {
-                height: 300px;
-                padding: 40px;
+                padding: 40px 20px;
+                height: 350px;
+                text-align: center;
             }
-
-            .banner-item h3 {
-                font-size: 24px;
+            .banner-item a {
+                margin: 0 auto;
             }
-
-            .info-item {
-                padding: 20px;
+            .footer-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
             }
-
-            .info-item .label {
+            .header-inner {
+                height: 70px;
+                padding: 0 15px;
+            }
+            .logo img {
+                height: 40px;
+            }
+            .section-title h2 {
+                font-size: 28px;
+            }
+            .section-title p {
                 font-size: 14px;
             }
-
-            .info-item .desc {
-                font-size: 14px;
+            /* Slides in trouble patch */
+            .info-card-img {
+                height: 200px;
             }
+        }
+
+        /* 에덴 슬라이더 글로벌 인포그래픽 레이아웃 (4단 그리드) */
+        .slide-content {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+
+        .slide-visual {
+            flex: 1.2;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .slide-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-info-grid {
+            flex: 1.2;
+            /* 가로로 넓게 쓰도록 조정 */
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 옆으로 4개 나란히 */
+            gap: 12px;
+            background: #f1f4f8;
+        }
+
+        .info-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-top: 3px solid #003366;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .info-box h4 {
+            font-size: 13px;
+            color: #003366;
+            margin-bottom: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .info-box p {
+            font-size: 11px;
+            color: #444;
+            line-height: 1.5;
+            word-break: keep-all;
+        }
+
+        /* Show info grid in all modes including Korean */
+        .slide-info-grid {
+            display: grid !important;
         }
     </style>
-    <script>
-        function forcePCView() {
-            var screenW = window.innerWidth || document.documentElement.clientWidth;
-            if (screenW < 1400) {
-                var ratio = screenW / 1400;
-                document.body.style.transform = 'scale(' + ratio + ')';
-                document.body.style.transformOrigin = 'top left';
-                document.body.style.width = '1400px';
-                document.body.style.overflowX = 'hidden';
-            } else {
-                document.body.style.transform = 'none';
-                document.body.style.width = '100%';
-                document.body.style.overflowX = 'auto';
-            }
-        }
-        window.addEventListener('resize', forcePCView);
-        window.addEventListener('DOMContentLoaded', forcePCView);
-    </script>
+
 </head>
 
 <body>
@@ -886,19 +1077,22 @@
     <header id="mainHeader">
         <div class="header-inner">
             <a href="/" class="logo">
-                <img src="logo.png" alt="HAN SOO" style="height: 45px; width: auto; vertical-align: middle;">
+                <img src="logo_hansoo_premium.png" alt="HAN SOO"
+                    style="height: 50px; width: auto; vertical-align: middle;">
             </a>
             <nav class="gnb">
-                    <li><a href="#brand-story">브랜드 스토리 (Brand)</a></li>
-                    <li><a href="#">멤버십 혜택 (Membership)</a></li>
-                    <li><a href="#products">모든 상품 (Shop)</a></li>
-                    <li><a href="#real-review">리얼 리뷰 (Review)</a></li>
-                    <li><a href="#">이벤트 (Event)</a></li>
+                <li><a href="#brand-story">브랜드 스토리</a></li>
+                <li><a href="#events">멤버십 혜택</a></li>
+                <li><a href="#all-products">모든 상품</a></li>
+                <li><a href="#real-reviews">리얼 리뷰</a></li>
+                <li><a href="#events">이벤트</a></li>
             </nav>
             <div class="header-util">
+
                 <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="1.5">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <path d="M20 6 9 17l-5-5" />
                         <circle cx="12" cy="7" r="4" />
                     </svg></a>
                 <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -907,55 +1101,70 @@
                         <path d="M3 6h18" />
                         <path d="M16 10a4 4 0 0 1-8 0" />
                     </svg></a>
-                <a href="#" style="font-weight: 700; font-size: 13px;">로그인 (Login)</a>
+                <a href="#" style="font-weight: 700; font-size: 13px;">로그인</a>
+
             </div>
         </div>
     </header>
 
     <main>
-        <!-- 메인 배너 이미지 영역 (Matched with eden_mask.html) -->
-        <section class="main-hero">
+        <!-- EDEN Original Hero Section (Restored to Correct Location) -->
+        <section class="hero">
             <div class="hero-content">
-                <p class="hero-subtitle">QUANTUM SKIN SCIENCE</p>
-                <h2 class="hero-title">BSK305 : WHITE CLAY</h2>
-                <h3 class="hero-tagline">1,200 메쉬 백토와 퀀텀 에너지의 결합</h3>
-                <p class="hero-description">'한수(韓水)', 한국의 맑은 물이 품은 자연의 생명력에 압도적인 퀀텀 과학을 더했습니다.<br>모공 속 노폐물은 자석처럼 당기고, 영양은 피부 깊숙이 밀어 넣습니다.</p>
-                <a href="eden_mask.html" class="hero-cta">과학적인 피부 변화 경험하기</a>
+                <p class="hero-subtitle">NATURAL & SCIENCE</p>
+                <h2 class="hero-title">EDEN White Clay Mask</h2>
+                <h3 class="hero-tagline">나를 위한 쉼</h3>
+                <p class="hero-description">자연의 생명력과 과학의 만남</p>
+                <a href="#all-products" class="hero-cta">지금 구매하기</a>
             </div>
         </section>
 
         <section class="main-section" id="all-products">
             <div class="section-title reveal">
-                <h2>베스트 셀러</h2>
-                <p>가장 많은 사랑을 받은 Han Soo Shopping Mall의 대표 제품들을 만나보세요</p>
+                <h2
+                    style="font-size: 36px; color: #000000; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">
+                    베스트 셀러
+                </h2>
+                <p style="color: #000000; font-weight: 500; font-size: 16px;">
+                    가장 많은 사랑을 받은 Han Soo Shopping Mall의 대표 제품들을 만나보세요
+                </p>
             </div>
 
             <div class="product-list">
                 <!-- 상품 1: 에덴 백토 마스크 -->
-                <a href="eden_mask.html" class="product-item reveal" style="display: block;">
+                <a href="#eden-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
-                        <span class="product-badge">베스트</span>
+                        <span class="product-badge">
+                            베스트
+                        </span>
                         <img src="eden_promo.png" alt="에덴 백토 마스크">
                     </div>
                     <div class="product-info">
                         <p class="brand">EDEN</p>
-                        <p class="name">에덴 화이트 클레이 백토 마스크 <span style="white-space: nowrap;">(나를 위한
-                                <strong>쉼</strong>)</span></p>
-                        <p class="price"><span style="color: #FF5A5F; margin-right: 5px;">33%</span> 4,000원 <span style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">6,000원</span></p>
+                        <p class="name">01 에덴 화이트 클레이 백토 마스크 (나를 위한 <strong>쉼</strong>)</p>
+                        <p class="price">
+                            <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 4,000원
+                            <span
+                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">6,000원</span>
+                        </p>
                     </div>
                 </a>
 
                 <!-- 상품 2: 시카 마스크 -->
                 <a href="#cica-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
-                        <span class="product-badge">베스트</span>
+                        <span class="product-badge">
+                            베스트
+                        </span>
                         <img src="cica_mask_v2.png" alt="시카 마스크">
                     </div>
                     <div class="product-info">
-                        <p class="brand">비바더마</p>
-                        <p class="name">시카 데일리 케어 마스크 (피부 진정 & 장벽 강화)</p>
-                        <p class="price"><span style="color: #FF5A5F; margin-right: 5px;">25%</span> 3,000원 <span
-                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">4,000원</span>
+                        <p class="brand">VIVA DERMA</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-시카</p>
+                        <p class="price">
+                            <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
+                            <span
+                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                         </p>
                     </div>
                 </a>
@@ -967,10 +1176,12 @@
                         <img src="ectoin_mask_v2.png" alt="엑토인 마스크">
                     </div>
                     <div class="product-info">
-                        <p class="brand">비바더마</p>
-                        <p class="name">엑토인 데일리 케어 마스크 (수분 폭탄 & 토탈 케어)</p>
-                        <p class="price"><span style="color: #FF5A5F; margin-right: 5px;">25%</span> 3,000원 <span
-                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">4,000원</span>
+                        <p class="brand">VIVA DERMA</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-엑토인</p>
+                        <p class="price">
+                            <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
+                            <span
+                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                         </p>
                     </div>
                 </a>
@@ -982,10 +1193,12 @@
                         <img src="niacinamide_mask_v2.png" alt="나이아신아마이드 마스크">
                     </div>
                     <div class="product-info">
-                        <p class="brand">비바더마</p>
-                        <p class="name">나이아신아마이드 마스크 (광채 부스팅 & 피지 조절)</p>
-                        <p class="price"><span style="color: #FF5A5F; margin-right: 5px;">25%</span> 3,000원 <span
-                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">4,000원</span>
+                        <p class="brand">VIVA DERMA</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-나이아신아마이드</p>
+                        <p class="price">
+                            <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
+                            <span
+                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                         </p>
                     </div>
                 </a>
@@ -997,10 +1210,12 @@
                         <img src="glutathione_mask_v2.png" alt="글루타치온 마스크">
                     </div>
                     <div class="product-info">
-                        <p class="brand">비바더마</p>
-                        <p class="name">글루타치온 데일리 케어 마스크 (항산화 & 탄력 생기)</p>
-                        <p class="price"><span style="color: #FF5A5F; margin-right: 5px;">25%</span> 3,000원 <span
-                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">4,000원</span>
+                        <p class="brand">VIVA DERMA</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-글루타치온</p>
+                        <p class="price">
+                            <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
+                            <span
+                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                         </p>
                     </div>
                 </a>
@@ -1012,10 +1227,12 @@
                         <img src="collagen_mask_v2.png" alt="콜라겐 마스크">
                     </div>
                     <div class="product-info">
-                        <p class="brand">비바더마</p>
-                        <p class="name">콜라겐 데일리 케어 마스크 (탄력 강화 & 윤기 부여)</p>
-                        <p class="price"><span style="color: #FF5A5F; margin-right: 5px;">25%</span> 3,000원 <span
-                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">4,000원</span>
+                        <p class="brand">VIVA DERMA</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-콜라겐</p>
+                        <p class="price">
+                            <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
+                            <span
+                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
                         </p>
                     </div>
                 </a>
@@ -1023,354 +1240,401 @@
                 <!-- 상품 7: 트러블 패치 -->
                 <a href="#trouble-patch-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
-                        <span class="product-badge">BEST</span>
+                        <span class="product-badge">신상품</span>
                         <img src="trouble_patch_v4.png" alt="트러블 패치" class="patch-crop">
                     </div>
                     <div class="product-info">
-                        <p class="brand">비바더마</p>
-                        <p class="name">마이크로니들 트러블 패치 (집중 소생 & 스팟 케어)</p>
-                        <p class="price"><span style="color: #FF5A5F; margin-right: 5px;">20%</span> 8,000원 <span
-                                style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">10,000원</span>
+                        <p class="brand">VIVA DERMA</p>
+                        <p class="name">03 비바더마 마이크로 니들 트러블 패치</p>
+                        <p class="price">
+                            <span style="color: #FF5A5F; margin-right: 5px;">20%</span> 8,000원
+                            <span style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">10,000원</span>
                         </p>
                     </div>
                 </a>
             </div>
         </section>
 
-        <!-- Product Details Section -->
-        <section class="product-story">
-            <div class="section-title reveal">
-                <h3
-                    style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; letter-spacing: 0.2em; margin-bottom: 100px;">
-                    제품 스토리</h3>
-            </div>
-
-            <!-- 1. 에덴 백토 마스크 상세 -->
-            <div class="story-group" id="eden-story">
-                <div class="story-title reveal">
-                    <h4>01. EDEN 화이트 클레이 백토 마스크</h4>
+        <!-- 1. 에덴 백토 마스크 상세 (100% Original Restore) -->
+        <section class="product-story" id="eden-story">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2
+                        style="font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300; letter-spacing: 0.1em; color: #111;">
+                        제품 스토리</h2>
+                    <div class="divider" style="width: 50px; height: 1px; background: #63886f; margin: 20px auto;">
+                    </div>
+                    <h3
+                        style="font-family: 'Inter', sans-serif; font-size: 20px; color: #003366; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 20px;">
+                        01 에덴 화이트 클레이 백토 마스크
+                    </h3>
                 </div>
-                <div id="eden-slider" class="story-container reveal"
-                    style="max-width: 1000px; margin: 0 auto; position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
 
+                <div class="story-slider-container">
+                    <div class="story-slider">
+                        <!-- Slide 1 -->
+                        <div class="story-slide active">
+                            <img src="image updated/Gemini_Generated_Image_8nxm5u8nxm5u8nxm.png" alt="슬라이드 1">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="story-slide">
+                            <img src="eden-cosmetics/detail_2.png" alt="슬라이드 2">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="story-slide">
+                            <img src="eden-cosmetics/detail_3.png" alt="슬라이드 3">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="story-slide">
+                            <img src="eden-cosmetics/detail_4.png" alt="슬라이드 4">
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="story-slide">
+                            <img src="image updated/Gemini_Generated_Image_v8odsjv8odsjv8od.png" alt="슬라이드 5">
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <button class="slider-arrow prev">❮</button>
+                    <button class="slider-arrow next">❯</button>
+
+                    <div class="slider-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 비바더마 마스크팩 그룹 타이틀 -->
+        <div class="story-title reveal" style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
+            <h4
+                style="font-family: 'Inter', sans-serif; font-size: 20px; color: #003366; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;">
+                02 비바더마 데일리 케어 마스크 (5종)
+            </h4>
+        </div>
+
+        <!-- 2. 시카 마스크 상세 -->
+        <div class="story-group" id="cica-story">
+            <div class="story-container reveal">
+                <div class="story-flex">
+                    <div class="story-visual">
+                        <img src="cica_mask_v2.png" alt="시카 마스크">
+                    </div>
+                    <div class="story-content">
+                        <p class="brand"
+                            style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
+                            VIVA DERMA</p>
+                        <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
+                            비바더마 데일리 케어 마스크-시카</h5>
+                        <p class="tags">#민감피부진정 #장벽강화솔루션 #4-시카콤플렉스</p>
+                        <div class="detail-info">
+                            <div class="info-item">
+                                <span class="label">핵심 성분</span>
+                                <p class="desc">병풀 추출물 - 외부 자극으로 예민해진 피부를 빠르게 진정시킵니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">테크놀로지</span>
+                                <p class="desc">4-시카 콤플렉스 기술(아시아틱애씨드 등 4종 병풀 핵심 성분)이 집약되어 있습니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">효능</span>
+                                <p class="desc">피부 본연의 힘을 길러주고 무너진 피부 장벽을 탄탄하게 케어하여 건강한 피부로 가꾸어줍니다.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 엑토인 마스크 상세 -->
+        <div class="story-group" id="ectoin-story">
+            <div class="story-container reveal">
+                <div class="story-flex">
+                    <div class="story-visual">
+                        <img src="ectoin_mask_v2.png" alt="엑토인 마스크">
+                    </div>
+                    <div class="story-content">
+                        <p class="brand"
+                            style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
+                            VIVA DERMA</p>
+                        <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
+                            비바더마 데일리 케어 마스크-엑토인</h5>
+                        <p class="tags">#수분자석 #강력보습 #엑토인솔루션</p>
+                        <div class="detail-info">
+                            <div class="info-item">
+                                <span class="label">핵심 성분</span>
+                                <p class="desc">엑토인 - 강력한 수분 자석 역할을 하여 외부 환경으로부터 피부를 안전하게 보호합니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">테크놀로지</span>
+                                <p class="desc">저분자 히알루론산이 피부 각질층 깊숙이 침투하여 빈틈없는 보습을 제공합니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">효능</span>
+                                <p class="desc">건조하고 메마른 피부에 즉각적인 수분을 공급하여 속당김을 해결하고 쫀쫀한 탄력을 부여합니다.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 나이아신아마이드 마스크 상세 -->
+        <div class="story-group" id="niacinamide-story">
+            <div class="story-container reveal">
+                <div class="story-flex">
+                    <div class="story-visual">
+                        <img src="niacinamide_mask_v2.png" alt="나이아신아마이드 마스크">
+                    </div>
+                    <div class="story-content">
+                        <p class="brand"
+                            style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
+                            VIVA DERMA</p>
+                        <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
+                            비바더마 데일리 케어 마스크-나이아신아마이드</h5>
+                        <p class="tags">#광채부스팅 #피지조절케어 #브라이트닝</p>
+                        <div class="detail-info">
+                            <div class="info-item">
+                                <span class="label">핵심 성분</span>
+                                <p class="desc">나이아신아마이드 - 멜라닌 이동을 억제하여 기미, 주근깨 완화 및 피부 톤을 개선합니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">상호 작용</span>
+                                <p class="desc">마데카소사이드 성분이 트러블 및 민감 부위를 진정시키며 깨끗한 피부 바탕을 조성합니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">핵심 효능</span>
+                                <p class="desc">칙칙한 피부를 맑고 투명하게 가꾸어주며 유수분 밸런스를 조절하여 번들거림 없는 광채를 선사합니다.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 글루타치온 마스크 상세 -->
+        <div class="story-group" id="glutathione-story">
+            <div class="story-container reveal">
+                <div class="story-flex">
+                    <div class="story-visual">
+                        <img src="glutathione_mask_v2.png" alt="글루타치온 마스크">
+                    </div>
+                    <div class="story-content">
+                        <p class="brand"
+                            style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
+                            VIVA DERMA</p>
+                        <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
+                            비바더마 데일리 케어 마스크-글루타치온</h5>
+                        <p class="tags">#강력항산화 #탄력생기충전 #윤기케어</p>
+                        <div class="detail-info">
+                            <div class="info-item">
+                                <span class="label">핵심 성분</span>
+                                <p class="desc">글루타치온 - 탁월한 항산화 효과로 활성산소를 억제하고 피부에 맑은 생기를 부여합니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">핵심 기술</span>
+                                <p class="desc">하이드롤라이즈드 콜라겐이 피부 깊숙이 흡수되어 무너진 탄력을 촘촘하게 잡아줍니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">핵심 효능</span>
+                                <p class="desc">푸석하고 힘을 잃은 피부에 풍부한 영양감을 전달하여 건강한 윤기와 탱글한 탄력을 되찾아줍니다.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 콜라겐 마스크 상세 -->
+        <div class="story-group" id="collagen-story">
+            <div class="story-container reveal">
+                <div class="story-flex">
+                    <div class="story-visual">
+                        <img src="collagen_mask_v2.png" alt="콜라겐 마스크">
+                    </div>
+                    <div class="story-content">
+                        <p class="brand"
+                            style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
+                            VIVA DERMA</p>
+                        <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
+                            비바더마 데일리 케어 마스크-콜라겐</h5>
+                        <p class="tags">#모공케어 #탄력지원 #탱탱한피부</p>
+                        <div class="detail-info">
+                            <div class="info-item">
+                                <span class="label">핵심 성분</span>
+                                <p class="desc">하이드롤라이즈드 콜라겐 - 저분자로 분해되어 피부 흡수율이 뛰어나며 건조한 피부에 깊은 수분감을 전달합니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">핵심 기술</span>
+                                <p class="desc">수분 보호막 형성 기술 - 피부 표면에 보호막을 형성하여 수분 손실을 방지하고 하루 종일 촉촉함을 유지합니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">핵심 효능</span>
+                                <p class="desc">탄력 및 윤기 개선 - 피부 장벽을 강화하고 탄력을 회복시켜 피부를 통통하고 매끄럽게 가꾸어 줍니다.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 비바더마 트러블 패치 그룹 타이틀 -->
+        <div class="story-title reveal" style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
+            <h4
+                style="font-family: 'Inter', sans-serif; font-size: 20px; color: #003366; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;">
+                03 비바더마 마이크로 니들 트러블 패치
+            </h4>
+        </div>
+
+        <!-- 6. 트러블 패치 상세 (고도화 버전) -->
+        <div class="story-group" id="trouble-patch-story">
+            <div class="story-container reveal">
+                <div class="story-flex">
+                    <div class="story-visual">
+                        <img src="trouble_patch_v4.png" alt="트러블 패치 메인" class="patch-crop">
+                    </div>
+                    <div class="story-content">
+                        <p class="brand"
+                            style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
+                            VIVA DERMA</p>
+                        <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
+                            비바더마 마이크로 니들 트러블 패치</h5>
+
+                        <p class="tags">#악화되기전진정 #심층타겟케어 #스팟집중솔루션</p>
+
+                        <div class="detail-info">
+                            <div class="info-item">
+                                <span class="label">강력한 초기 진정</span>
+                                <p class="desc">피부 고민이 깊어지기 전, 약 200개의 정교한 마이크로 포인트가 유효 성분을 고민 부위 깊숙이 직접 전달하여 빠르게
+                                    진정시킵니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">위생적이고 간편한 보관</span>
+                                <p class="desc">전용 위생 케이스가 포함되어 있어 남은 패치를 외부 오염으로부터 안전하고 깨끗하게 보관할 수 있습니다.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">빈틈없는 밀착 케어</span>
+                                <p class="desc">15mm의 넉넉한 대형 사이즈로 어떤 크기의 트러블도 완벽하게 커버하며, 피부에 굴곡 없이 밀착됩니다.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- 하단 상세 특징 (이미지 대신 한글 텍스트 레이아웃) -->
+                <!-- 하단 상세 특징 (슬라이더 적용) -->
+                <div id="trouble-patch-slider" class="story-container reveal"
+                    style="max-width: 800px; margin: 0 auto; position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     <div class="slider-track" style="display: flex; transition: transform 0.5s ease-in-out;">
-                        <div class="slide" style="min-width: 100%;"><img
-                                src="image updated/Gemini_Generated_Image_8nxm5u8nxm5u8nxm.png" alt="에덴 마스크팩 메인 설명"
-                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
-                        <div class="slide" style="min-width: 100%;"><img src="eden-cosmetics/detail_2.png" alt="백토의 효능"
-                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
-                        <div class="slide" style="min-width: 100%;"><img src="eden-cosmetics/detail_3.png"
-                                alt="3가지 에너지 과학"
-                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
-                        <div class="slide" style="min-width: 100%;"><img src="eden-cosmetics/detail_4.png" alt="강력한 흡착력"
-                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
-                        <div class="slide" style="min-width: 100%;"><img
-                                src="image updated/Gemini_Generated_Image_v8odsjv8odsjv8od.png" alt="4-in-1 토탈 케어"
-                                style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;"></div>
+                        <!-- 슬라이드 1 -->
+                        <div class="slide" style="min-width: 100%;">
+                            <div class="info-card" style="border: none;">
+                                <div class="info-card-img" style="height: 250px;">
+                                    <img src="trouble_patch_delivery_ko.png" alt="정교한 심층 전달 시스템">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 슬라이드 2 -->
+                        <div class="slide" style="min-width: 100%;">
+                            <div class="info-card" style="border: none;">
+                                <div class="info-card-img" style="height: 250px;">
+                                    <img src="trouble_patch_coverage_info.jpg" alt="15mm 대형 사이즈 밀착 커버">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 슬라이드 3 -->
+                        <div class="slide" style="min-width: 100%;">
+                            <div class="info-card" style="border: none;">
+                                <div class="info-card-img" style="height: 250px;">
+                                    <img src="trouble_patch_case_info.png" alt="위생 케이스 보관법"
+                                        style="display: block; margin: 0 auto;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- 좌우 이동 버튼 -->
                     <button class="slider-btn prev"
                         style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); 
-                        background: rgba(255,255,255,0.8); border: none; width: 50px; height: 50px; 
-                        border-radius: 50%; cursor: pointer; font-size: 24px; color: #333; 
-                        z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
+                            background: rgba(255,255,255,0.8); border: none; width: 50px; height: 50px; 
+                            border-radius: 50%; cursor: pointer; font-size: 24px; color: #333; 
+                            z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
                         &#10094;
                     </button>
                     <button class="slider-btn next"
                         style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); 
-                        background: rgba(255,255,255,0.8); border: none; width: 50px; height: 50px; 
-                        border-radius: 50%; cursor: pointer; font-size: 24px; color: #333; 
-                        z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
+                            background: rgba(255,255,255,0.8); border: none; width: 50px; height: 50px; 
+                            border-radius: 50%; cursor: pointer; font-size: 24px; color: #333; 
+                            z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
                         &#10095;
                     </button>
                 </div>
             </div>
+            </section>
 
-            <!-- 2. 시카 마스크 상세 -->
-            <div class="story-group" id="cica-story">
-                <div class="story-title reveal">
-                    <h4>02. 비바더마 데일리케어 마스크류</h4>
-                </div>
-                <div class="story-container reveal">
-                    <div class="story-flex">
-                        <div class="story-visual">
-                            <img src="cica_mask_v2.png" alt="시카 마스크">
-                        </div>
-                        <div class="story-content">
-                            <p class="brand" style="color: var(--secondary-green); font-weight: 700;">비바더마</p>
-                            <h5>시카 데일리 케어 마스크</h5>
-                            <p class="tags">#민감피부진정 #장벽강화솔루션 #4-시카콤플렉스</p>
-                            <div class="detail-info">
-                                <div class="info-item">
-                                    <span class="label">핵심 성분</span>
-                                    <p class="desc">병풀 추출물 - 외부 자극으로 예민해진 피부를 빠르게 진정시킵니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">테크놀로지</span>
-                                    <p class="desc">4-시카 콤플렉스 기술(아시아틱애씨드 등 4종 병풀 핵심 성분)이 집약되어 있습니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">효능</span>
-                                    <p class="desc">피부 본연의 힘을 길러주고 무너진 피부 장벽을 탄탄하게 케어하여 건강한 피부로 가꾸어줍니다.</p>
-                                </div>
-                            </div>
-                        </div>
+            <section class="main-section" style="padding-top: 0;">
+                <!-- 하단 브랜드 이미지 배너 영역 -->
+                <div class="banner-box">
+                    <!-- 브랜드 철학: 맑은 하늘 이미지 -->
+                    <div id="brand-story" class="banner-item reveal"
+                        style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?w=800&q=80'); color: #333; background-position: center; background-size: cover;">
+                        <p
+                            style="font-size: 14px; letter-spacing: 0.2em; opacity: 1; margin-bottom: 10px; color: #1565C0; font-weight: 700;">
+                            BRAND STORY
+                        </p>
+                        <h3 style="font-size: 36px; line-height: 1.3; color: #0D47A1; font-weight: 900;">
+                            타협하지 않는<br>자연주의 철학</h3>
+
+                        <p style="margin-bottom: 30px; opacity: 1; font-size: 15px; font-weight: 800; color: #37474F;">
+                            피부에
+                            닿는 그 순간까지,<br>자연 그대로의 생명력을 온전히 담았습니다.</p>
+
+                        <a href="#" style="border-bottom: 1px solid #0D47A1; color: #0D47A1; font-weight: 600;">Han Soo
+                            이야기
+                            보기</a>
+                    </div>
+                    <!-- 고객 후기: 산뜻하고 깨끗한 이미지 -->
+                    <div id="real-reviews" class="banner-item reveal"
+                        style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'); color: #333; background-position: center; background-size: cover;">
+                        <p
+                            style="font-size: 14px; letter-spacing: 0.2em; opacity: 1; margin-bottom: 10px; color: #00695C; font-weight: 700;">
+                            REAL REVIEW</p>
+                        <h3 style="font-size: 36px; line-height: 1.3; color: #004D40; font-weight: 900;">
+                            98%가 경험한<br>놀라운 피부 변화</h3>
+
+                        <p style="margin-bottom: 30px; opacity: 1; font-size: 15px; font-weight: 800; color: #37474F;">
+                            "역시
+                            Han Soo - 성진은 다르네요."<br>고객님들의 생생한 찐후기를 확인하세요.</p>
+
+                        <a href="#" style="border-bottom: 1px solid #004D40; color: #004D40; font-weight: 600;">베스트 리뷰
+                            확인</a>
                     </div>
                 </div>
-            </div>
 
-            <!-- 3. 엑토인 마스크 상세 -->
-            <div class="story-group" id="ectoin-story">
-                <div class="story-container reveal">
-                    <div class="story-flex">
-                        <div class="story-visual">
-                            <img src="ectoin_mask_v2.png" alt="엑토인 마스크">
-                        </div>
-                        <div class="story-content">
-                            <p class="brand" style="color: var(--secondary-green); font-weight: 700;">비바더마</p>
-                            <h5>엑토인 데일리 케어 마스크</h5>
-                            <p class="tags">#수분폭탄 #피부장벽토탈케어 #고농축수분</p>
-                            <div class="detail-info">
-                                <div class="info-item">
-                                    <span class="label">핵심 성분</span>
-                                    <p class="desc">엑토인 - 강력한 수분 자석 역할을 하여 외부 환경으로부터 피부를 안전하게 보호합니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">테크놀로지</span>
-                                    <p class="desc">저분자 히알루론산이 피부 각질층 깊숙이 침투하여 빈틈없는 보습을 제공합니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">효능</span>
-                                    <p class="desc">건조하고 메마른 피부에 즉각적인 수분을 공급하여 속당김을 해결하고 쫀쫀한 탄력을 부여합니다.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. 나이아신아마이드 마스크 상세 -->
-            <div class="story-group" id="niacinamide-story">
-                <div class="story-container reveal">
-                    <div class="story-flex">
-                        <div class="story-visual">
-                            <img src="niacinamide_mask_v2.png" alt="나이아신아마이드 마스크">
-                        </div>
-                        <div class="story-content">
-                            <p class="brand" style="color: var(--secondary-green); font-weight: 700;">비바더마</p>
-                            <h5>나이아신아마이드 데일리 케어 마스크</h5>
-                            <p class="tags">#광채부스팅 #피지조절케어 #브라이트닝</p>
-                            <div class="detail-info">
-                                <div class="info-item">
-                                    <span class="label">핵심 성분</span>
-                                    <p class="desc">나이아신아마이드 - 멜라닌 이동을 억제하여 기미, 주근깨 완화 및 피부 톤을 개선합니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">시너지 효과</span>
-                                    <p class="desc">마데카소사이드 성분이 트러블 및 민감 부위를 진정시키며 깨끗한 피부 바탕을 조성합니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">효능</span>
-                                    <p class="desc">칙칙한 피부를 맑고 투명하게 가꾸어주며 유수분 밸런스를 조절하여 번들거림 없는 광채를 선사합니다.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 5. 글루타치온 마스크 상세 -->
-            <div class="story-group" id="glutathione-story">
-                <div class="story-container reveal">
-                    <div class="story-flex">
-                        <div class="story-visual">
-                            <img src="glutathione_mask_v2.png" alt="글루타치온 마스크">
-                        </div>
-                        <div class="story-content">
-                            <p class="brand" style="color: var(--secondary-green); font-weight: 700;">비바더마</p>
-                            <h5>글루타치온 데일리 케어 마스크</h5>
-                            <p class="tags">#강력항산화 #탄력생기충전 #윤기케어</p>
-                            <div class="detail-info">
-                                <div class="info-item">
-                                    <span class="label">핵심 성분</span>
-                                    <p class="desc">글루타치온 - 탁월한 항산화 효과로 활성산소를 억제하고 피부에 맑은 생기를 부여합니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">테크놀로지</span>
-                                    <p class="desc">하이드롤라이즈드 콜라겐이 피부 깊숙이 흡수되어 무너진 탄력을 촘촘하게 잡아줍니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">효능</span>
-                                    <p class="desc">푸석하고 힘을 잃은 피부에 풍부한 영양감을 전달하여 건강한 윤기와 탱글한 탄력을 되찾아줍니다.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 6. 콜라겐 마스크 상세 -->
-            <div class="story-group" id="collagen-story">
-                <div class="story-container reveal">
-                    <div class="story-flex">
-                        <div class="story-visual">
-                            <img src="collagen_mask_v2.png" alt="콜라겐 마스크">
-                        </div>
-                        <div class="story-content">
-                            <p class="brand" style="color: var(--secondary-green); font-weight: 700;">비바더마</p>
-                            <h5>콜라겐 데일리 케어 마스크</h5>
-                            <p class="tags">#모공케어 #탄력지원 #탱탱한피부</p>
-                            <div class="detail-info">
-                                <div class="info-item">
-                                    <span class="label">핵심 성분</span>
-                                    <p class="desc">하이드롤라이즈드 콜라겐 - 저분자로 분해되어 피부 흡수율이 뛰어나며 건조한 피부에 깊은 수분감을 전달합니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">테크놀로지</span>
-                                    <p class="desc">수분 보호막 형성 기술 - 피부 표면에 보호막을 형성하여 수분 손실을 방지하고 하루 종일 촉촉함을 유지합니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">효능</span>
-                                    <p class="desc">탄력 및 윤기 개선 - 피부 장벽을 강화하고 탄력을 회복시켜 피부를 통통하고 매끄럽게 가꾸어 줍니다.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 6. 트러블 패치 상세 (고도화 버전) -->
-            <div class="story-group" id="trouble-patch-story">
-                <div class="story-container reveal">
-                    <div class="story-flex">
-                        <div class="story-visual">
-                            <img src="trouble_patch_v4.png" alt="트러블 패치 메인" class="patch-crop">
-                        </div>
-                        <div class="story-content">
-                            <p class="brand">비바더마</p>
-                            <h5>마이크로니들 트러블 패치</h5>
-                            <p class="tags">#악화되기전진정 #심층타겟케어 #스팟집중솔루션</p>
-                            <div class="detail-info">
-                                <div class="info-item">
-                                    <span class="label">강력한 초기 진정</span>
-                                    <p class="desc">피부 고민이 깊어지기 전, 약 200개의 정교한 마이크로 포인트가 유효 성분을 고민 부위 깊숙이 직접 전달하여 빠르게
-                                        진정시킵니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">위생적이고 간편한 보관</span>
-                                    <p class="desc">전용 위생 케이스가 포함되어 있어 남은 패치를 외부 오염으로부터 안전하고 깨끗하게 보관할 수 있습니다.</p>
-                                </div>
-                                <div class="info-item">
-                                    <span class="label">빈틈없는 밀착 케어</span>
-                                    <p class="desc">15mm의 넉넉한 대형 사이즈로 어떤 크기의 트러블도 완벽하게 커버하며, 피부에 굴곡 없이 매끄럽게 밀착됩니다.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 하단 상세 특징 (이미지 대신 한글 텍스트 레이아웃) -->
-                    <!-- 하단 상세 특징 (슬라이더 적용) -->
-                    <div id="trouble-patch-slider" class="story-container reveal"
-                        style="max-width: 1000px; margin: 0 auto; position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        <div class="slider-track" style="display: flex; transition: transform 0.5s ease-in-out;">
-                            <!-- 슬라이드 1 -->
-                            <div class="slide" style="min-width: 100%;">
-                                <div class="info-card">
-                                    <div class="info-card-img">
-                                        <img src="trouble_patch_delivery_ko.png" alt="심층 전달 원리">
-                                    </div>
-                                    <div class="info-card-text">
-                                        <h6>정교한 심층 전달 시스템</h6>
-                                        <p>마이크로 시스템을 통해 유효 성분을 피부 깊숙이 직접 전달하여 빠르고 강력한 진정 효과를 선사합니다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 슬라이드 2 -->
-                            <div class="slide" style="min-width: 100%;">
-                                <div class="info-card">
-                                    <div class="info-card-img">
-                                        <img src="trouble_patch_coverage_info.jpg" alt="15mm 밀착 커버 상세">
-                                    </div>
-                                    <div class="info-card-text">
-                                        <h6>15mm 대형 사이즈 밀착 커버</h6>
-                                        <p>이미지 하단의 상세 설명을 통해 마이크로 포인트의 정밀한 전달 원리를 확인하실 수 있습니다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 슬라이드 3 -->
-                            <div class="slide" style="min-width: 100%;">
-                                <div class="info-card">
-                                    <div class="info-card-img">
-                                        <img src="trouble_patch_case_info.png" alt="위생 케이스 보관법"
-                                            style="display: block; margin: 0 auto;">
-                                    </div>
-                                    <div class="info-card-text">
-                                        <h6>위생 케이스로 깔끔한 보관</h6>
-                                        <p>전용 보관 케이스가 포함되어 있어, 사용하지 않은 패치를 외부 오염으로부터 안전하고 위생적으로 보관할 수 있습니다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 좌우 이동 버튼 -->
-                        <button class="slider-btn prev"
-                            style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); 
-                            background: rgba(255,255,255,0.8); border: none; width: 50px; height: 50px; 
-                            border-radius: 50%; cursor: pointer; font-size: 24px; color: #333; 
-                            z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
-                            &#10094;
-                        </button>
-                        <button class="slider-btn next"
-                            style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); 
-                            background: rgba(255,255,255,0.8); border: none; width: 50px; height: 50px; 
-                            border-radius: 50%; cursor: pointer; font-size: 24px; color: #333; 
-                            z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
-                            &#10095;
-                        </button>
-                    </div>
-                </div>
-        </section>
-
-        <section class="main-section" style="padding-top: 0;">
-            <!-- 하단 브랜드 이미지 배너 영역 -->
-            <div class="banner-box">
-                <!-- 브랜드 철학: 맑은 하늘 이미지 -->
-                <div id="brand-story" class="banner-item reveal"
-                    style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?w=800&q=80'); color: #333; background-position: center; background-size: cover;">
-                    <p
-                        style="font-size: 14px; letter-spacing: 0.2em; opacity: 1; margin-bottom: 10px; color: #1565C0; font-weight: 700;">
-                        QUANTUM HERITAGE
-                    </p>
-                    <h3 style="font-size: 36px; line-height: 1.3; color: #0D47A1; font-weight: 500;">한국의 맑은 물(韓水)과<br>양자 과학의 완벽한 조화
-                    </h3>
-                    <p style="margin-bottom: 30px; opacity: 1; font-size: 15px; font-weight: 500; color: #37474F;">가장 깨끗한 한국의 물, '한수'의 맑은 생명력을 베이스로<br>동의보감의 지혜인 백토 원적외선을 BSK305 퀀텀 기술로 극대화하여 담아냈습니다.</p>
-                    <a href="#" style="border-bottom: 1px solid #0D47A1; color: #0D47A1; font-weight: 600;">데이터 리포트 전체보기</a>
-                </div>
-                <!-- 고객 후기: 산뜻하고 깨끗한 이미지 -->
-                <div id="real-reviews" class="banner-item reveal"
-                    style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'); color: #333; background-position: center; background-size: cover;">
-                    <p
-                        style="font-size: 14px; letter-spacing: 0.2em; opacity: 1; margin-bottom: 10px; color: #00695C; font-weight: 700;">
-                        REAL REVIEW</p>
-                    <h3 style="font-size: 36px; line-height: 1.3; color: #004D40; font-weight: 500;">
-                        98%가 경험한<br>놀라운 피부 변화</h3>
-                    <p style="margin-bottom: 30px; opacity: 1; font-size: 15px; font-weight: 500; color: #37474F;">
-                        "역시 Han Soo - 성진은 다르네요."<br>고객님들의 생생한 찐후기를 확인하세요.</p>
-                    <a href="#" style="border-bottom: 1px solid #004D40; color: #004D40; font-weight: 600;">베스트 리뷰
-                        확인</a>
-                </div>
-            </div>
-
-        </section>
+            </section>
     </main>
 
     <footer>
         <div class="footer-inner">
             <div>
                 <h4 class="footer-logo">Han Soo - 성진</h4>
-                <p>경북 영천시 망정 1길 171번지</p>
-                <p>고객센터: 1544-0000</p>
-                <p>평일 10:00 - 17:00 (점심시간 12:30 - 13:30 / 토, 일, 공휴일 휴무)</p>
+                <p style="font-weight: 800;">경북 영천시 망정 1길 171번지</p>
+                <p style="font-weight: 800;">고객센터: 1544-0000 | 이메일: spoindo@naver.com</p>
+                <p style="font-weight: 800;">평일 10:00 - 17:00 (점심시간 12:30 - 13:30 / 토, 일, 공휴일 휴무)</p>
             </div>
             <div>
                 <p style="font-weight: 700; margin-bottom: 20px; color: #000;">쇼핑가이드</p>
@@ -1385,7 +1649,7 @@
                 <p>회사소개</p>
             </div>
             <div>
-                <p style="font-weight: 700; margin-bottom: 20px; color: #000;">뉴스레터</p>
+                <p style="font-weight: 700; margin-bottom: 20px; color: #000;">NEWSLETTER</p>
                 <p>한수의 새로운 소식과 혜택을 받아보세요.</p>
                 <div style="border-bottom: 1px solid #ccc; margin-top: 20px; padding-bottom: 5px; display: flex;">
                     <input type="text" placeholder="이메일 주소"
@@ -1395,7 +1659,7 @@
             </div>
         </div>
         <div style="margin-top: 50px; text-align: center; color: #bbb; font-size: 11px;">
-            &copy; 2026 EDEN. 모든 권리 보유.
+            <span>&copy; 2026 EDEN. 모든 권리 보유.</span>
         </div>
     </footer>
 
@@ -1460,27 +1724,87 @@
                     this.currentSlide = 0;
                 }
                 this.updateSlider();
+
+                // Add resize listener to handle responsive width changes
+                window.addEventListener('resize', () => this.updateSlider());
             }
 
             updateSlider() {
-                if (this.track) {
-                    this.track.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+                if (this.track && this.slides.length > 0) {
+                    // Get absolute precise float width
+                    const rect = this.container.getBoundingClientRect();
+                    const containerWidth = rect.width;
+
+                    this.slides.forEach(slide => {
+                        slide.style.width = `${containerWidth}px`;
+                        slide.style.flex = `0 0 ${containerWidth}px`;
+                        slide.style.margin = '0';
+                        slide.style.marginRight = '-1px'; // Overlap slightly to prevent gaps
+                        slide.style.padding = '0';
+                    });
+
+                    // Accurate offset using float width
+                    const offset = this.currentSlide * containerWidth;
+                    this.track.style.transform = `translate3d(-${offset}px, 0, 0)`;
                 }
             }
         }
 
-        // Initialize Sliders
+
         document.addEventListener('DOMContentLoaded', () => {
+
             // Eden Mask Slider
             new ImageSlider('eden-slider', 0);
 
             // Trouble Patch Slider
             new ImageSlider('trouble-patch-slider', 0);
 
-            // Future sliders can be added here
-            // new ImageSlider('cica-slider', 0);
+            // 스크롤 애니메이션 옵저버
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Product Story Slider Logic (Restored)
+            const slider = document.querySelector('.story-slider');
+            const slides = document.querySelectorAll('.story-slide');
+            const prevBtn = document.querySelector('.slider-arrow.prev');
+            const nextBtn = document.querySelector('.slider-arrow.next');
+            const dots = document.querySelectorAll('.dot');
+            let currentSlide = 0;
+
+            function updateSlider(index) {
+                if (!slider) return;
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+
+                currentSlide = index;
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                dots.forEach(dot => dot.classList.remove('active'));
+                if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+            }
+
+            if (prevBtn) prevBtn.addEventListener('click', () => updateSlider(currentSlide - 1));
+            if (nextBtn) nextBtn.addEventListener('click', () => updateSlider(currentSlide + 1));
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const index = parseInt(dot.getAttribute('data-index'));
+                    updateSlider(index);
+                });
+            });
+            // Initial update
+            updateSlider(0);
         });
     </script>
 </body>
 
 </html>
+```

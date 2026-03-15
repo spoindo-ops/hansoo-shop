@@ -106,7 +106,6 @@
             background-color: var(--white);
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
-            min-width: 1400px;
         }
 
         a {
@@ -835,7 +834,7 @@
             margin-bottom: 25px;
         }
 
-        @media (max-width: 0px) {
+        @media (max-width: 1024px) {
             .product-list {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -919,8 +918,87 @@
             object-position: center !important;
         }
 
-        @media (max-width: 0px) {
-            /* ... (이전 모바일 스타일 생략) ... */
+        @media (max-width: 768px) {
+            .hero, .main-hero {
+                aspect-ratio: auto;
+                height: 60vh;
+                padding: 0 20px;
+                justify-content: center;
+                text-align: center;
+            }
+            .hero::before, .main-hero::before {
+                background-size: cover;
+                width: 100%;
+                max-width: none;
+            }
+            .hero-content {
+                margin: 0 !important;
+                max-width: 90%;
+                padding: 20px;
+            }
+            .hero-title {
+                font-size: 28px;
+            }
+            .hero-tagline {
+                font-size: 16px;
+            }
+            .product-list {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .story-flex {
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 30px;
+            }
+            .story-visual {
+                height: 300px;
+                flex: none;
+                width: 100%;
+            }
+            .story-content {
+                width: 100%;
+                text-align: center;
+            }
+            .story-content h5 {
+                font-size: 24px;
+            }
+            .detail-info {
+                text-align: left;
+            }
+            .banner-box {
+                grid-template-columns: 1fr;
+            }
+            .banner-item {
+                padding: 40px 20px;
+                height: 350px;
+                text-align: center;
+            }
+            .banner-item a {
+                margin: 0 auto;
+            }
+            .footer-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+            .header-inner {
+                height: 70px;
+                padding: 0 15px;
+            }
+            .logo img {
+                height: 40px;
+            }
+            .section-title h2 {
+                font-size: 28px;
+            }
+            .section-title p {
+                font-size: 14px;
+            }
+            /* Slides in trouble patch */
+            .info-card-img {
+                height: 200px;
+            }
         }
 
         /* 에덴 슬라이더 글로벌 인포그래픽 레이아웃 (4단 그리드) */
@@ -987,24 +1065,7 @@
             display: grid !important;
         }
     </style>
-    <script>
-        function forcePCView() {
-            var screenW = window.innerWidth || document.documentElement.clientWidth;
-            if (screenW < 1400) {
-                var ratio = screenW / 1400;
-                document.body.style.transform = 'scale(' + ratio + ')';
-                document.body.style.transformOrigin = 'top left';
-                document.body.style.width = '1400px';
-                document.body.style.overflowX = 'hidden';
-            } else {
-                document.body.style.transform = 'none';
-                document.body.style.width = '100%';
-                document.body.style.overflowX = 'auto';
-            }
-        }
-        window.addEventListener('resize', forcePCView);
-        window.addEventListener('DOMContentLoaded', forcePCView);
-    </script>
+
 </head>
 
 <body>
@@ -1099,7 +1160,7 @@
                     </div>
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
-                        <p class="name">02 비바더마 데일리 케어 마스크 시카</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-시카</p>
                         <p class="price">
                             <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                             <span
@@ -1116,7 +1177,7 @@
                     </div>
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
-                        <p class="name">02 비바더마 데일리 케어 마스크 엑토인</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-엑토인</p>
                         <p class="price">
                             <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                             <span
@@ -1128,13 +1189,12 @@
                 <!-- 상품 4: 나이아신아마이드 마스크 -->
                 <a href="#niacinamide-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
-                        <span class="product-badge">
-                            <span class="product-badge">신상품</span>
-                            <img src="niacinamide_mask_v2.png" alt="나이아신아마이드 마스크">
+                        <span class="product-badge">신상품</span>
+                        <img src="niacinamide_mask_v2.png" alt="나이아신아마이드 마스크">
                     </div>
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
-                        <p class="name">02 비바더마 데일리 케어 마스크 나이아신아마이드</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-나이아신아마이드</p>
                         <p class="price">
                             <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                             <span
@@ -1146,13 +1206,12 @@
                 <!-- 상품 5: 글루타치온 마스크 -->
                 <a href="#glutathione-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
-                        <span class="product-badge">
-                            <span class="product-badge">신상품</span>
-                            <img src="glutathione_mask_v2.png" alt="글루타치온 마스크">
+                        <span class="product-badge">신상품</span>
+                        <img src="glutathione_mask_v2.png" alt="글루타치온 마스크">
                     </div>
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
-                        <p class="name">02 비바더마 데일리 케어 마스크 글루타치온</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-글루타치온</p>
                         <p class="price">
                             <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                             <span
@@ -1164,17 +1223,32 @@
                 <!-- 상품 6: 콜라겐 마스크 -->
                 <a href="#collagen-story" class="product-item reveal" style="display: block;">
                     <div class="product-thumb">
-                        <span class="product-badge">
-                            <span class="product-badge">신상품</span>
-                            <img src="collagen_mask_v2.png" alt="콜라겐 마스크">
+                        <span class="product-badge">신상품</span>
+                        <img src="collagen_mask_v2.png" alt="콜라겐 마스크">
                     </div>
                     <div class="product-info">
                         <p class="brand">VIVA DERMA</p>
-                        <p class="name">02 비바더마 데일리 케어 마스크 콜라겐</p>
+                        <p class="name">02 비바더마 데일리 케어 마스크-콜라겐</p>
                         <p class="price">
                             <span style="color: #FF5A5F; margin-right: 5px;">33%</span> 1,000원
                             <span
                                 style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">1,500원</span>
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 상품 7: 트러블 패치 -->
+                <a href="#trouble-patch-story" class="product-item reveal" style="display: block;">
+                    <div class="product-thumb">
+                        <span class="product-badge">신상품</span>
+                        <img src="trouble_patch_v4.png" alt="트러블 패치" class="patch-crop">
+                    </div>
+                    <div class="product-info">
+                        <p class="brand">VIVA DERMA</p>
+                        <p class="name">03 비바더마 마이크로 니들 트러블 패치</p>
+                        <p class="price">
+                            <span style="color: #FF5A5F; margin-right: 5px;">20%</span> 8,000원
+                            <span style="font-size: 13px; color: #999; text-decoration: line-through; font-weight: 400; margin-left: 5px;">10,000원</span>
                         </p>
                     </div>
                 </a>
@@ -1256,7 +1330,7 @@
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
                         <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            비바더마 데일리 케어 마스크 - 시카</h5>
+                            비바더마 데일리 케어 마스크-시카</h5>
                         <p class="tags">#민감피부진정 #장벽강화솔루션 #4-시카콤플렉스</p>
                         <div class="detail-info">
                             <div class="info-item">
@@ -1284,14 +1358,14 @@
             <div class="story-container reveal">
                 <div class="story-flex">
                     <div class="story-visual">
-                        <img src="ectoin_mask_v2.png" alt="마이크로 니들 트러블 패치">
+                        <img src="ectoin_mask_v2.png" alt="엑토인 마스크">
                     </div>
                     <div class="story-content">
                         <p class="brand"
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
                         <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            비바더마 데일리 케어 마스크 - 엑토인</h5>
+                            비바더마 데일리 케어 마스크-엑토인</h5>
                         <p class="tags">#수분자석 #강력보습 #엑토인솔루션</p>
                         <div class="detail-info">
                             <div class="info-item">
@@ -1326,7 +1400,7 @@
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
                         <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            비바더마 데일리 케어 마스크 - 나이아신아마이드</h5>
+                            비바더마 데일리 케어 마스크-나이아신아마이드</h5>
                         <p class="tags">#광채부스팅 #피지조절케어 #브라이트닝</p>
                         <div class="detail-info">
                             <div class="info-item">
@@ -1361,7 +1435,7 @@
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
                         <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            비바더마 데일리 케어 마스크 - 글루타치온</h5>
+                            비바더마 데일리 케어 마스크-글루타치온</h5>
                         <p class="tags">#강력항산화 #탄력생기충전 #윤기케어</p>
                         <div class="detail-info">
                             <div class="info-item">
@@ -1396,7 +1470,7 @@
                             style="color: #003366; font-weight: 800; text-transform: uppercase; font-size: 14px; margin-bottom: 10px;">
                             VIVA DERMA</p>
                         <h5 style="color: #003366; font-weight: 900; text-transform: uppercase; font-size: 20px;">
-                            비바더마 데일리 케어 마스크 - 콜라겐</h5>
+                            비바더마 데일리 케어 마스크-콜라겐</h5>
                         <p class="tags">#모공케어 #탄력지원 #탱탱한피부</p>
                         <div class="detail-info">
                             <div class="info-item">
