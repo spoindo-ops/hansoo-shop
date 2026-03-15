@@ -106,6 +106,7 @@
             background-color: var(--white);
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
+            min-width: 1400px;
         }
 
         a {
@@ -834,24 +835,7 @@
             margin-bottom: 25px;
         }
 
-        @media (max-width: 1024px) {
-            .product-list {
-                grid-template-columns: repeat(2, 1fr);
-            }
 
-            .header-inner {
-                padding: 0 20px;
-            }
-
-            .gnb {
-                display: none;
-            }
-
-            .footer-inner {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
 
         /* Info Grid for Details */
         .info-grid {
@@ -918,37 +902,7 @@
             object-position: center !important;
         }
 
-        @media (max-width: 768px) {
-            /* 상단 히어로 섹션만 모바일 최적화 (박스크기 대폭 축소) */
-            .hero, .main-hero {
-                aspect-ratio: auto;
-                height: 50vh;
-                padding: 0 5%;
-                justify-content: flex-start;
-                align-items: center;
-                text-align: left;
-            }
-            .hero::before, .main-hero::before {
-                background-size: cover;
-                background-position: 80% center; 
-                width: 100%;
-                max-width: none;
-            }
-            .hero-content {
-                margin: 0 !important;
-                max-width: 180px;
-                padding: 12px;
-                background: rgba(0, 0, 0, 0.45);
-                transform: scale(0.85);
-                transform-origin: left center;
-                border-radius: 10px;
-            }
-            .hero-subtitle { font-size: 8px; margin-bottom: 6px; }
-            .hero-title { font-size: 20px; margin-bottom: 4px; }
-            .hero-tagline { font-size: 13px; white-space: normal; margin-bottom: 6px; }
-            .hero-description { font-size: 10px; margin-bottom: 12px; }
-            .hero-cta { padding: 6px 18px; font-size: 10px; }
-        }
+
 
         /* 에덴 슬라이더 글로벌 인포그래픽 레이아웃 (4단 그리드) */
         .slide-content {
@@ -1625,6 +1579,25 @@
         }, observerOptions);
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // --- Force PC View on Mobile ---
+        function forcePCView() {
+            const pcWidth = 1400; // PC 기준 가로폭
+            const screenWidth = window.screen.width;
+
+            if (screenWidth < pcWidth) {
+                const scale = screenWidth / pcWidth;
+                const viewport = document.querySelector('meta[name="viewport"]');
+                if (viewport) {
+                    viewport.setAttribute('content', `width=${pcWidth}, initial-scale=${scale}, minimum-scale=${scale}, maximum-scale=2.0, user-scalable=yes`);
+                }
+            }
+        }
+
+        // 실행
+        forcePCView();
+        window.addEventListener('resize', forcePCView);
+        window.addEventListener('orientationchange', forcePCView);
 
         // Header scroll effect
         window.addEventListener('scroll', () => {
